@@ -31,7 +31,7 @@ module.exports = {
       },
       {
         text: '读书笔记',
-        link: '/read/index.html'
+        link: 'https://zyzweb.github.io/zyzBlog/read/index.html'
       },
       {
         text: '做过的项目',

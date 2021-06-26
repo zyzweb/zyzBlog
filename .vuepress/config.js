@@ -15,7 +15,7 @@ module.exports = {
     ]
     // ["style",{ src: "/blog-vuepress/style/base.css"}]
   ],
-  dest: "docs",
+  dest: "dist",
   // base: "/blog-vuepress/",
   description: "用Vupress架Blog",
   themeConfig: {

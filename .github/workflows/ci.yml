@@ -10,11 +10,13 @@ jobs:
     steps:
     - name: Checkout
       uses: actions/checkout@master
-
-    - name: Build and Deploy
+    - name: Install and Build
+      run: |
+        npm install
+        npm run-script build
+    - name: Deploy
       uses: JamesIves/github-pages-deploy-action@releases/v3
       env:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages
         FOLDER: dist   #打包之后目录
-        BUILD_SCRIPT: npm install && npm run build

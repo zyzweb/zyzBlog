@@ -4,8 +4,7 @@ module.exports = {
   head: [
     [ "link", 
       { 
-        rel: "icon", href: "http://git.jyblife.com/uploads/-/system/user/avatar/172/avatar.png?width=36",
- 
+        rel: "icon", href: "https://gitee.com/zyzcode/gitee-pic/raw/master/20210626141637.png",
       }
     ],
     ["script",
@@ -19,7 +18,7 @@ module.exports = {
   base: "/zyzBlog/",
   description: "用Vupress架Blog",
   themeConfig: {
-    logo: 'http://git.jyblife.com/uploads/-/system/user/avatar/172/avatar.png?width=36',
+    logo: 'https://gitee.com/zyzcode/gitee-pic/raw/master/20210626141637.png',
     navbar: [
       // NavbarItem
       // {

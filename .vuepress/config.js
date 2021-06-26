@@ -15,16 +15,41 @@ module.exports = {
     // ["style",{ src: "/blog-vuepress/style/base.css"}]
   ],
   dest: "dist",
+  public: "public",
   base: "/zyzBlog/",
   description: "用Vupress架Blog",
   themeConfig: {
     logo: 'https://gitee.com/zyzcode/gitee-pic/raw/master/20210626141637.png',
     navbar: [
+      {
+        text: '前端网站导航',
+        children: [
+          {text: '前端网站导航', link: '/前端网站导航.html'},
+          {text: 'css常用技巧', link: '/css常用技巧.html'},
+          {text: 'vuejs网站导航', link: '/vuejs网站导航.html'},
+        ]
+      },
+      {
+        text: '读书笔记',
+        link: '/read/index.html'
+      },
+      {
+        text: '做过的项目',
+        children: [
+          {text: '网易音乐播放器', link: '/music/index.html'}
+        ]
+      },
+      {
+        text: 'gitee链接',
+        link: 'https://gitee.com/zyzcode/'
+      }
+
       // NavbarItem
       // {
-      //   text: 'guide',
-      //   link: '/guide/1.md',
-      // },
+      //   text: '',
+      //   link: ''
+      // }
+
       // NavbarGroup
       // {
       //   text: 'Group',
@@ -56,7 +81,6 @@ module.exports = {
           "/doc/快捷键.md",
           "/doc/快速定位bug.md",
           "/doc/浏览器加载外部脚本(油猴等).md",
-          "/doc/密码.md",
           "/doc/配置全局代理(浏览器代理用SwitchyOmega).md",
           "/doc/搜索.md",
           "/doc/提交规范.md",

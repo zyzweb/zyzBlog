@@ -24,9 +24,9 @@ module.exports = {
       {
         text: '前端网站导航',
         children: [
-          {text: '前端网站导航', link: '/前端网站导航.html'},
-          {text: 'css常用技巧', link: '/css常用技巧.html'},
-          {text: 'vuejs网站导航', link: '/vuejs网站导航.html'},
+          {text: '前端网站导航', link: 'https://zyzweb.github.io/zyzBlog/前端网站导航.html'},
+          {text: 'css常用技巧', link: 'https://zyzweb.github.io/zyzBlog/css常用技巧.html'},
+          {text: 'vuejs网站导航', link: 'https://zyzweb.github.io/zyzBlog/vuejs网站导航.html'},
         ]
       },
       {
@@ -36,7 +36,7 @@ module.exports = {
       {
         text: '做过的项目',
         children: [
-          {text: '网易音乐播放器', link: '/music/index.html'}
+          {text: '网易音乐播放器', link: 'https://zyzweb.github.io/zyzBlog/music/index.html'}
         ]
       },
       {

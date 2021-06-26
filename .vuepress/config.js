@@ -16,7 +16,7 @@ module.exports = {
     // ["style",{ src: "/blog-vuepress/style/base.css"}]
   ],
   dest: "dist",
-  // base: "/blog-vuepress/",
+  base: "/zyzBlog/",
   description: "用Vupress架Blog",
   themeConfig: {
     logo: 'http://git.jyblife.com/uploads/-/system/user/avatar/172/avatar.png?width=36',

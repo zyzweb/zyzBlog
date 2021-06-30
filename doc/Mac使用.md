@@ -1,8 +1,6 @@
 # Mac使用
 
-系统是OS Sierra(10.12_10.13)以上,需要用终端打开 允许任何来源
-
-sudo spctl --master-disable
+sudo spctl --master-disable  // 系统是OS Sierra(10.12_10.13)以上,需要用终端打开 允许任何来源
 
 触发角设置桌面操作方式
 
@@ -166,3 +164,13 @@ git输入账号密码之后会自动保存在钥匙串中,双击登录,输入2�
 windows上也有密码储存功能,关于git提交不用设置ssh,以后都用https
 
 ![image-20210624162259068](https://gitee.com/zyzcode/gitee-pic/raw/master/image-20210624162259068.png)
+
+### 命令行修改dns
+
+```bash
+networksetup -listallnetworkservices #查看有哪些网络
+networksetup -setdnsservers Wi-Fi 114.114.114.114 8.8.8.8  #设置wifi的dns
+networksetup -getdnsservers Wi-Fi   #查看dns有没有设置成功
+dscacheutil -flushcache   #刷新dns
+```
+

@@ -35,3 +35,15 @@ jobs:
         FOLDER: dist   #打包之后目录
 ```
 
+四、注意事项
+
+1. 日志默认保存30天
+2. package.json添加homepage字段,部署后的根目录
+
+```json
+"homepage": "https://zyzweb.github.io/zyzBlog",
+```
+
+3. 只需设置环境变量,不需要设置仓库变量
+4. github官方action地址 [github.com/actions](https://github.com/actions),还有[官方市场](https://github.com/marketplace?type=actions),[awesome actions](https://github.com/sdras/awesome-actions)仓库
+

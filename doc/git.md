@@ -64,3 +64,16 @@ git config --global --unset http.proxy
 
  git config --global --unset https.proxy
 
+## 同一个仓库设置2个远程仓库
+
+```bash
+git remote rm origin  #删除远程仓库
+git remote add github https://github.com/zyzweb/zyzBlog.git  #添加github仓库
+git remote add gitee https://gitee.com/zyzcode/zyzBlog.git  #添加gitee仓库
+git remote -v  #查看最终结果
+gitee	https://gitee.com/zyzcode/zyzBlog.git (fetch)
+gitee	https://gitee.com/zyzcode/zyzBlog.git (push)
+github	https://github.com/zyzweb/zyzBlog.git (fetch)
+github	https://github.com/zyzweb/zyzBlog.git (push)
+```
+

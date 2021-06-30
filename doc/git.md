@@ -75,5 +75,8 @@ gitee	https://gitee.com/zyzcode/zyzBlog.git (fetch)
 gitee	https://gitee.com/zyzcode/zyzBlog.git (push)
 github	https://github.com/zyzweb/zyzBlog.git (fetch)
 github	https://github.com/zyzweb/zyzBlog.git (push)
+#git add /commit保持一致  git push 分开提交
+git push github master
+git push gitee master
 ```
 

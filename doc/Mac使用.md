@@ -1,5 +1,7 @@
 # Mac使用
 
+双指放大缩小失效  睡眠模式再唤醒
+
 sudo spctl --master-disable  // 系统是OS Sierra(10.12_10.13)以上,需要用终端打开 允许任何来源
 
 触发角设置桌面操作方式
@@ -149,7 +151,9 @@ sudo discoveryutil udnsflushcaches
 sudo killall -HUP mDNSResponder
 ```
 
-使用爱思助手签名ipa文件(选择appID 签名7天)然后应用游戏--导入安装
+使用爱思助手签名ipa文件(选择appID 签名7天)然后应用游戏--导入安装(选择签名后的ipa不是原来的ipa安装)
+
+加盟编号1024
 
 ### Magic Trackpad 2代   https://community.folivora.ai/   配合BetterTouchTool
 
@@ -173,4 +177,14 @@ networksetup -setdnsservers Wi-Fi 114.114.114.114 8.8.8.8  #设置wifi的dns
 networksetup -getdnsservers Wi-Fi   #查看dns有没有设置成功
 dscacheutil -flushcache   #刷新dns
 ```
+
+查看mac地址和局域网ip
+
+option + 单击wifi
+
+BSSID为wifi mac地址  
+
+ESSID为wifi名称
+
+![image-20210702181724519](https://gitee.com/zyzcode/gitee-pic/raw/master/image-20210702181724519.png)
 

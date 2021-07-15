@@ -46,4 +46,5 @@ jobs:
 
 3. 只需设置环境变量,不需要设置仓库变量
 4. github官方action地址 [github.com/actions](https://github.com/actions),还有[官方市场](https://github.com/marketplace?type=actions),[awesome actions](https://github.com/sdras/awesome-actions)仓库
+5. GitHub Actions可免费用于公共仓库。对于私有仓库，它具有按需付费的机制
 

@@ -101,6 +101,7 @@ module.exports = {
           {text: 'switchyomega', link: '/doc/switchyomega.md'},
           {text: 'whistle调试', link: '/doc/whistle调试.md'},
           {text: 'Xcode下载', link: '/doc/Xcode下载.md'},
+          {text: '安卓玩机', link: '/doc/安卓玩机.md'},
         ],
       },
     ],

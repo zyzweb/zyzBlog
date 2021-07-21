@@ -27,6 +27,14 @@
 # https://cdn.jyblife.com/channel/h5buy/mbuy.html http://172.16.5.215:8097/public/mbuy.html
 ```
 
+## 安装
+
+```bash
+npm install -g whistle
+npm install -g whistle.chii
+npm install -g whistle.inspect
+```
+
 ## 常用命令
 
 w2 start   启动whistle
@@ -48,12 +56,8 @@ w2 stop 停止
 - 安卓直接安装
 - **勾选2个选项**![image-20210611174241732](/Users/zhuyuanzheng/Library/Application Support/typora-user-images/image-20210611174241732.png)
 
-​     
+##  参考链接:
+
+  [whistle官网](https://wproxy.org/whistle/)
 
 
-
-
-
-
-
-#

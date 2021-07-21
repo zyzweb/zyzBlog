@@ -46,6 +46,8 @@ motrix 下载软件
 
 Alfred 效率
 
+Adobe_Zii破解adobe软件
+
 下载软件FDM https://www.freedownloadmanager.org/zh/   
 
 ## 各种路径
@@ -159,7 +161,12 @@ sudo killall -HUP mDNSResponder
 
 使用教程  https://blog.csdn.net/guang_s/article/details/106940265
 
+## 删除自带ABC
 
+1.  首先关闭sip(System Integrity Protection ) 系统完整性保护https://www.163.com/dy/article/FTQGK3G80544QFPE.html
+2.  安装plistEdit Pro 
+3.  删除ABC输入法,重启电脑  https://bin.zmide.com/?p=421
+      
 
 ## 钥匙串
 

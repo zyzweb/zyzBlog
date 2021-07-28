@@ -195,3 +195,6 @@ ESSID为wifi名称
 
 ![image-20210702181724519](https://gitee.com/zyzcode/gitee-pic/raw/master/image-20210702181724519.png)
 
+### iphone投屏
+
+iphone连接Mac--打开quickTime--新建影片录制--切换摄像头和麦克风即可

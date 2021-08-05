@@ -20,7 +20,11 @@ px2rem  // px转rem
 
 Key Promoter X  //快捷键提醒
 
-.ignore  //自动提示你哪些文件可以被 ignore
+Atom Material Icons 图标
+
+one dark theme //主题
+
+console log //console相关
 
 WakaTime  //统计敲代码时间
 
@@ -69,4 +73,8 @@ ws自带jest单元测试，具体可以【帮助】->[学习ide功能]了解详�
 [webstorm中console.log的个性化设置](https://blog.csdn.net/qq_36609655/article/details/109055848)
 
 [更改字体大小](https://qpluspicture.oss-cn-beijing.aliyuncs.com/up/gatYqk.png)
+
+
+
+![image-20210804101131900](https://gitee.com/zyzcode/gitee-pic/raw/master/image-20210804101131900.png)
 

@@ -24,6 +24,8 @@ Removebg   人工智能抠图
 
 腾讯lemon
 
+istat  menus 网速等各种监控软件
+
 MacZip 免费压缩软件
 
 cheatsheet 按住command查看快捷键
@@ -31,6 +33,8 @@ cheatsheet 按住command查看快捷键
 SwitchHosts 
 
 Plistedit pro
+
+App Cleaner && Uninstaller
 
 utools
 
@@ -143,8 +147,7 @@ export EDITOR=atom
 ## 清dns缓存
 
 ```bash
-sudo discoveryutil mdnsflushcache
-sudo discoveryutil udnsflushcaches
+dscacheutil -flushcache sudo discoveryutil udnsflushcaches
 ```
 
 ## 刷新dns
@@ -166,7 +169,6 @@ sudo killall -HUP mDNSResponder
 1.  首先关闭sip(System Integrity Protection ) 系统完整性保护https://www.163.com/dy/article/FTQGK3G80544QFPE.html
 2.  安装plistEdit Pro 
 3.  删除ABC输入法,重启电脑  https://bin.zmide.com/?p=421
-      
 
 ## 钥匙串
 
@@ -198,3 +200,7 @@ ESSID为wifi名称
 ### iphone投屏
 
 iphone连接Mac--打开quickTime--新建影片录制--切换摄像头和麦克风即可
+
+sudo rm ~/Library/Preferences/com.apple.appstore.plist
+
+Aa123456

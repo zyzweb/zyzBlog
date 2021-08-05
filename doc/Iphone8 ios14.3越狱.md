@@ -45,5 +45,18 @@ https://support.apple.com/zh-cn/guide/iphone/iph8903c3ee6/ios
 
 
 
+### iphone wifi问题
+
+1. 关闭wifi重新连接
+2. 忽略网络重新连接
+3. 设置--通用--还原--还原网络设置
+4. 重启手机
+5. 关闭vpn
+6. 抹掉手机所有数据
+
+ 
+
+
+
 ### 最后推荐一个ios的博客 https://www.ios.im/archives/3.html
 

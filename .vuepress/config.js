@@ -76,6 +76,7 @@ module.exports = {
         children: [
           {text: '常见报错', link: '/doc/常见报错.md'},
           {text: '常用css mixin', link: '/doc/常用css mixin.md'},
+          {text: 'util', link: '/doc/js Utils.md'},
           {text: '创建自定义事件', link: '/doc/创建自定义事件.md'},
           {text: '翻墙vpn', link: '/doc/翻墙vpn.md'},
           {text: '快捷键', link: '/doc/快捷键.md'},

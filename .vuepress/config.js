@@ -16,7 +16,7 @@ module.exports = {
   ],
   dest: "dist",
   public: "public",
-  base: "/",
+  base: "/zyzBlog/",
   description: "用Vupress架Blog",
   themeConfig: {
     logo: 'https://gitee.com/zyzcode/gitee-pic/raw/master/20210626141637.png',

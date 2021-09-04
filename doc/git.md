@@ -114,6 +114,14 @@ git config --global alias.logs "log --graph --pretty=format:'%C(yellow)%h%Creset
 
 ```
 
+## 生成私钥
+
+```shell
+ssh-keygen -t rsa -C "zyz1609062132@gmail.com"
+```
+
+
+
 ## Github 在线看代码
 
 https://github.dev/zyzweb/zyzBlog

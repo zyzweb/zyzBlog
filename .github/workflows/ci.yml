@@ -18,7 +18,7 @@ jobs:
         env:
           SSH_PRIVATE_KEY: ${{ secrets.ALIYUN_SERVER_ACCESS_TOKEN }}
           ARGS: "-avzr --delete"
-          SOURCE: "./dist"
+          SOURCE: "dist/"
           REMOTE_HOST: "47.107.149.52"
           REMOTE_USER: "root"
           TARGET: "/root/web"

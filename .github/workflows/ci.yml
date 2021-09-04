@@ -19,12 +19,4 @@ jobs:
           ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
           BRANCH: gh-pages
           FOLDER: dist #打包之后目录
-      - name: Deploy to aliyun server
-        uses: easingthemes/ssh-deploy@v2.1.1
-        env:
-          SSH_PRIVATE_KEY: ${{ secrets.ALIYUN_SERVER_ACCESS_TOKEN }}
-          ARGS: "-avzr --delete"
-          SOURCE: "./dist"
-          REMOTE_HOST: "47.107.149.52"
-          REMOTE_USER: "root"
-          TARGET: "/root/usr/share/nginx/html"
+     

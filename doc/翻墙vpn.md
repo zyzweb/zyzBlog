@@ -85,6 +85,14 @@ sslspeedy2 购买地址 https://1937o.com/main.php   插件官网 [https://vpnso
 
 ## **翻墙方法**
 
+### chrome
+
+#iGG谷歌访问助手
+
+### macOS
+
+V2RayX  V2RayU  clashX  surge(收费)
+
 ### ios
 
 1.surge 是ios系统翻墙方式 主要目的是网络调试,翻墙只是次要功能  [https://medium.com/@scomper/surge-%E9%85%8D%E7%BD%AE%E6%96%87%E4%BB%B6-a1533c10e80b](https://medium.com/@scomper/surge-配置文件-a1533c10e80b)
@@ -96,6 +104,10 @@ sslspeedy2 购买地址 https://1937o.com/main.php   插件官网 [https://vpnso
 4.vpn plus
 
 5.potatso Lite (app store  美国id)
+
+6.QuantumultX
+
+7.6Quantumult
 
 ### android
 
@@ -212,3 +224,38 @@ BGP保证了各个不同宽带服务商连接的速度，但是还是要过墙�
 ## Shadowrocket更新方法(更新其他非自己appID购买的app也是同理)
 
 储存空间--卸载app,不删除数据,然后找一个美区已购买账号,purchase中找到然后下载最新版
+
+
+
+shadowsocksX-NG-R8--服务器设置--删除服务器选项
+
+clashX支持 V2ray/trojan协议
+
+clashX设置规则,然后在Switch Omega中切换
+
+PROCESS-NAME,Google Chrome Helper,🔰国外流量
+
+
+
+## 规则
+
+AutoProxy   https://github.com/gfwlist/gfwlist
+
+DNSMasq  https://github.com/felixonmars/dnsmasq-china-list
+
+PAC   https://github.com/breakwa11/gfw_whitelist
+
+ACL
+
+
+
+## 参考链接:
+
+[gfwlist](https://github.com/gfwlist/gfwlist)
+
+[订阅转换器-V2ray,Clash,SSR,SS等订阅链接在线转换](https://subconverter.speedupvpn.com/)
+
+[iphone testflight翻墙](https://github.com/bannedbook/fanqiang/wiki/iphone%E7%BF%BB%E5%A2%99)
+
+
+

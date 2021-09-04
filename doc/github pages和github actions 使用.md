@@ -4,6 +4,8 @@
 
 ### 二、在仓库设置环境变量(代码需和仓库设置保持一致)
 
+创建github个人访问令牌
+
 ```yaml
 ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
 ```
@@ -19,7 +21,7 @@ on:
       - master #触发分支,其他分支提交不触发
 jobs:
   build-and-deploy:
-    runs-on: ubuntu-latest   #虚拟机环境
+    runs-on: ubuntu-latest   #虚拟机环境包含了nodejs
     steps:
     - name: Checkout
       uses: actions/checkout@master
@@ -27,12 +29,14 @@ jobs:
       run: |
         npm install
         npm run build
-    - name: Deploy
+    - name: Deploy github pages
       uses: JamesIves/github-pages-deploy-action@releases/v3
       with:
         ACCESS_TOKEN: ${{ secrets.ACCESS_TOKEN }}
         BRANCH: gh-pages
         FOLDER: dist   #打包之后目录
+        
+    
 ```
 
 四、注意事项
@@ -47,4 +51,10 @@ jobs:
 3. 只需设置环境变量,不需要设置仓库变量
 4. github官方action地址 [github.com/actions](https://github.com/actions),还有[官方市场](https://github.com/marketplace?type=actions),[awesome actions](https://github.com/sdras/awesome-actions)仓库
 5. GitHub Actions可免费用于公共仓库。对于私有仓库，它具有按需付费的机制
+
+### 生成公钥和私钥的2种方法
+
+1.阿里云的 ECS 控制台，在左侧菜单找到 < 网络与安全 > < 密钥对 >
+
+2.通过命令  ssh-keygen
 

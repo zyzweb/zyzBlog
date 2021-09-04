@@ -29,6 +29,28 @@ function isweixin() {
 }
 
 /**
+ * 判断2个数组是否相等
+ * @param {array} a 数组1
+ * @param {array} b 数组2
+ */
+function isArrayEqual(a,b,res=true) {
+  if(a.length !== b.length) return (res = false)
+  const s = new Set(b)
+  if(a.find(x => !s.has(x))) return (res = false)
+  return res
+}
+
+/**
+ * 将小数转化为百分数
+ * @param  number 小数
+ * @param  digit 保留位数
+ */
+function numPercentage(number, digit=2) {
+  return (Math.abs(Number(number) * 100)).toFixed(digit) + '%'
+}
+
+
+/**
  * 函数防抖
  * @param { function } func
 
@@ -240,6 +262,12 @@ function getURLParameters(url) {
 }
 getURLParameters('http://url.com/page?n=Adam&s=Smith'); // {n: 'Adam', s: 'Smith'}
 getURLParameters('google.com'); // {}
+/**
+ * 获取滚动条距顶部的巨鹿
+ */
+function topDistance() {
+  return document.documentElement.scrollTop || document.body.scrollTop
+}
 
 /**
  * 滚动到指定元素区域
@@ -333,6 +361,37 @@ function division(num1,num2){
 function localStorageSet(key, value) {
   if (typeof (value) === 'object') value = JSON.stringify(value);
   localStorage.setItem(key, value)
+}
+
+/**
+ * 生成随机id (uuid) 默认8位
+ * @param {*} length
+ * @param {*} chars
+ */
+function uuid(length, chars) {
+    chars =
+        chars ||
+        '0123456789abcdefghijklmnopqrstuvwxyzABCDEFGHIJKLMNOPQRSTUVWXYZ'
+    length = length || 8
+    var result = ''
+    for (var i = length; i > 0; --i)
+        result += chars[Math.floor(Math.random() * chars.length)]
+    return result
+}
+uuid()  
+
+
+/**
+ *生成随机号码,前3位随机 + 后8位随机
+ */
+function getMoble() {
+  var prefixArray = ["130", "131", "132", "133", "135", "137", "138", "170", "187", "189"];
+  var i = parseInt(10 * Math.random());
+  var prefix = prefixArray[i];
+  for (var j = 0; j < 8; j++) {
+      prefix = prefix + Math.floor(Math.random() * 10);
+  }
+  return prefix;
 }
 
 /**
@@ -521,7 +580,7 @@ function shuffle(arr) {
 shuffle([1,2,3,4])
 
 /**
- * 返回两个数组中都显示的元素的数组
+ * 返回两个数组中都显示的元素的数组(取交集)
  * @param arr1 数组1
  * @param arr2 数组2
  * @return {*} 数组
@@ -530,6 +589,51 @@ function similarity(arr1, arr2) {
   return arr1.filter(v => arr2.includes(v))
 }
 similarity([1,2,3], [2,3,4]) // [2,3]
+
+/**
+ * 1个对象数组根据另一个对象数组的某个属性进行排序
+ * @param arr1 要排序的数组
+ * @param arr2 参照的数组
+ * @param property 依据参照数组的属性
+ * @return {Array} arr1排序之后的数组
+ */
+function arraySort(arr1, arr2, property) {
+  let arr = [];
+  let arr3 = [];
+  arr2.forEach(item => {
+    arr.push(item[property])
+  })
+  arr1.forEach(item => {
+    arr3.push(item[property])
+  })
+   //先判断内容是否相等
+  if(!equalContent(arr, arr3)) {
+    //报错提示 待补充
+    
+    return
+  }
+  
+  return arr1.sort(function (a, b) {
+    const prev = arr.indexOf(a[property]);
+    const next = arr.indexOf(b[property]);
+    return prev - next;
+  })
+}
+const arr1 = [{name:1,age:1},{name:2,age:1},{name:3,age:1}]
+const arr2 = [{name:3},{name:2},{name:1}]
+arraySort(arr1, arr2, 'name') //[{name:3,age:1},{name:2,age:1},{name:1,age:1}]
+
+
+/**
+ * 判断2个数组是否具有相同的内容(相等可以直接JSON.Stringify之后判断)
+ * @param arr1 数组1
+ * @param arr2 数组2
+ * @return {boolean}
+ */
+function equalContent(arr1, arr2) {
+  if(arr1.length !== arr2.length) return false
+  return arr1.every(item => arr2.includes(item))
+}
 
 /**
  * 计算数组中值的出现次数
@@ -587,6 +691,42 @@ function numFormat(num) {
 function getFormatPrice(price) {
   return String(price).replace(/(\d{1,3})(?=(\d{3})+(\.\d*)?$)/g, '$1,');
 }
+
+/**
+ * 获取文件后缀名
+ * @param {String} filename
+ */
+function getExt(filename) {
+    if (typeof filename == 'string') {
+        return filename
+            .split('.')
+            .pop()
+            .toLowerCase()
+    } else {
+        throw new Error('filename must be a string type')
+    }
+}
+getExt('2.json') //json
+  
+ /**
+ * 复制内容到剪贴板
+ * @value {String} 
+ */
+ function copyToBoard(value) {
+    const element = document.createElement('textarea')
+    document.body.appendChild(element)
+    element.value = value
+    element.select()
+    if (document.execCommand('copy')) {
+        document.execCommand('copy')
+        document.body.removeChild(element)
+        return true
+    }
+    document.body.removeChild(element)
+    return false
+}
+  copyToBoard('hahah')
+
 /**
  * 判断函数执行次数
  */

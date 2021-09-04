@@ -28,7 +28,7 @@ git merge 和 git rebase区别
 
 ```bash
 #只对github.com
-git config --global http.https://github.com.proxy socks5://127.0.0.1:4781
+git config --global http.https://github.com.proxy socks5://127.0.0.1:7890
 
 #取消代理
 git config --global --unset http.https://github.com.proxy)
@@ -79,4 +79,44 @@ github	https://github.com/zyzweb/zyzBlog.git (push)
 git push github master
 git push gitee master
 ```
+
+## 查看git配置信息
+
+查看系统config
+
+```
+git config --system --list
+```
+
+　　
+
+查看当前用户（global）配置
+
+```
+git config --global --list
+```
+
+ 
+
+查看当前仓库配置信息
+
+```
+git config -- local --list
+```
+
+
+
+## 设置别名alias
+
+```shell
+git config --global alias.here '!git init && git add . && git commit -m "init "' #初始化项目
+git config --global alias.logs "log --graph --pretty=format:'%C(yellow)%h%Creset -%Cred%d%Creset %s %Cgreen| %cr %C(bold blue)| %an%Creset' --abbrev-commit --date=relative"
+
+```
+
+## Github 在线看代码
+
+https://github.dev/zyzweb/zyzBlog
+
+https://github1s.com/zyzweb/zyzBlog
 

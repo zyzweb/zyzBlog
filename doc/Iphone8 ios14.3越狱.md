@@ -2,7 +2,7 @@
 
 ## 使用unc0ver软件进行
 
-1、下载unc0ver.ipa 使用爱思助手利用appleID打包
+1、从https://unc0ver.dev/下载unc0ver.ipa 使用爱思助手利用appleID打包
 
 2、进去之后直接执行,然后重启(这整个过程重复2次)
 
@@ -19,6 +19,10 @@
 **Appsync安装**: 添加cydia.angelxwind.net源    插件--Appsync Unified 安装 (无签名可安装IPA)
 
 **afc2安装**:通过unc0ver越狱后，安装的Cydia里的BigBoss源中自带了新版的afc2 补丁。afc2的全名是Apple File Conduit 2
+
+## 相关名词
+
+**DFU（Development Firmware Upgrade**)  开发者模式
 
 ## 屏蔽越狱检测插件
 
@@ -59,4 +63,8 @@ https://support.apple.com/zh-cn/guide/iphone/iph8903c3ee6/ios
 
 
 ### 最后推荐一个ios的博客 https://www.ios.im/archives/3.html
+
+### 参考链接:
+
+[威锋越狱板块](https://www.feng.com/topic/10)
 

@@ -24,6 +24,8 @@ Removebg   人工智能抠图
 
 腾讯lemon
 
+FinalShell
+
 istat  menus 网速等各种监控软件
 
 MacZip 免费压缩软件
@@ -31,6 +33,8 @@ MacZip 免费压缩软件
 cheatsheet 按住command查看快捷键
 
 SwitchHosts 
+
+Hyper Dock   docker悬浮框
 
 Plistedit pro
 

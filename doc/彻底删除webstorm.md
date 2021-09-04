@@ -32,11 +32,15 @@ GitToolBox  //查看当前行代码作者和时间
 
 Rainbow Brackets  //括号有颜色
 
+OnlineSearch2 //codeIf插件
+
+[ IDE Eval Rese](https://blog.csdn.net/alan_alei/article/details/111738323)
 
 
 
 
 
+设置--版本控制--提交--关闭分析代码和检查TODO
 
 帮助->诊断工具->分析插件启动时间 //选择是否禁用插件
 

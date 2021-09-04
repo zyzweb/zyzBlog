@@ -31,14 +31,14 @@ git merge 和 git rebase区别
 git config --global http.https://github.com.proxy socks5://127.0.0.1:7890
 
 #取消代理
-git config --global --unset http.https://github.com.proxy)
+git config --global --unset http.https://github.com.proxy
 ```
 
 ### git设置代理
 
-git config --global http.proxy http://127.0.0.1:1080
+git config --global http.proxy http://127.0.0.1:7890
 
-git config --global https.proxy https://127.0.0.1:1080
+git config --global https.proxy https://127.0.0.1:7890
 
 ### git取消代理
 

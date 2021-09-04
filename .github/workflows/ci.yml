@@ -14,10 +14,10 @@ jobs:
           npm install
           npm run build
       - name: Deploy to aliyun server
-        uses: easingthemes/ssh-deploy@v2.1.1
+        uses: easingthemes/ssh-deploy@main
         env:
           SSH_PRIVATE_KEY: ${{ secrets.ALIYUN_SERVER_ACCESS_TOKEN }}
-          ARGS: "-avzr --delete"
+          ARGS: "-rltgoDzvO --delete"
           SOURCE: "dist/"
           REMOTE_HOST: "47.107.149.52"
           REMOTE_USER: "root"

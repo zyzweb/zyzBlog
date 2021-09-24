@@ -238,6 +238,19 @@
   }
 }
 
+//扩展点击区域
+@mixin extendClick($top: -10px, $bottom: -10px, $left: -10px, $right: -10px){
+  position: relative;
+  &:before{
+    content: '';
+    position: absolute;
+    top: $top;
+    bottom: $bottom;
+    left: $left;
+    right: $right;
+  }
+}
+
 ```
 
 

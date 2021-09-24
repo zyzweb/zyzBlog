@@ -41,7 +41,17 @@ systemctl enable nginx #设为开机启动
 systemctl disable nginx #禁止开机启动
 ```
 
+## 常见名称:
 
+CNAME（Canonical Name）记录即别名记录，用来把一个域名解析成另一个域名，再由另一个域名提供源站服务
+
+
+
+## 开通CDN
+
+1.在阿里云控制台打开cdn服务
+
+2.;源站信息填ip,配置缓存策略
 
 ## 常见问题
 

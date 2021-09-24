@@ -80,6 +80,52 @@ export function debounce(func,wait,immediate) {
 
   }
 }
+/**
+ * 倒计时(剩余时间)
+ * @param { number }毫秒数
+ */
+timeLeft(hmin) {
+  if(hmin < 1000) return '00:00:00'
+  let time = parseInt(hmin/1000);
+  let hour = Math.floor(time/60/60);
+  time = time - hour * 60 * 60
+  if(hour < 10) {
+    hour = '0' + hour
+  }
+  let min = Math.floor(time/60);
+  time = time - min * 60;
+  if(min < 10) {
+    min = '0' + min
+  }
+  if( time < 10) {
+    time = '0' + time
+  }
+  return `${hour} 小时 ${min} 分 ${time} 秒`
+}
+
+// 时间格式化
+formatDay(val) {
+  const date = new Date(val)
+  if (!!date) {
+    let year = date.getFullYear()
+    let month = date.getMonth() + 1
+    let day = date.getDate()
+    let hours = date.getHours()
+    let minutes = date.getMinutes()
+    let seconds = date.getSeconds()
+    if (hours < 10) {
+      hours = '0' + hours
+    }
+    if (minutes < 10) {
+      minutes = '0' + minutes
+    }
+    if (seconds < 10) {
+      seconds = '0' + seconds
+    }
+
+    return `${year}/${month}/${day} ${hours}:${minutes}:${seconds}`
+  }
+}
 
 /**
  * 函数节流
@@ -141,6 +187,12 @@ function type(target) {
     return ret;
   }
 }
+
+//修改对象数组里的对象属性名
+//1）JSON.stringify()把json对象转成json字符串；
+//2）使用正则的replace()方法替换属性名；
+//3）JSON.parse()把json字符串又转成json对象。
+JSON.parse(JSON.stringify(data).replace(/name1/g, 'new_name1').replace(/name2/g, 'new_name2').replace(/name3/g, 'new_name3')...)   
 
 /**
  * 日期格式化

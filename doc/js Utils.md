@@ -19,6 +19,18 @@ function getOSType() {
 }
 
 /**
+ * 将时间字符串转换成date对象(避免ios兼容问题和早8点问题)
+ * @param dateStr
+ * 时间字符串
+ */
+function getDate(dateStr){
+    /* 若日期是使用-分割的，全部转换成/
+            因为只有日期时，js会将-分割的字符串基准时区设置为GMT，与当前时区相差8小时 */
+    dateStr = dateStr.replace(/-|\./g, '/');
+    return new Date(dateStr);
+}
+
+/**
  * 判断是否在微信
  * 判断是否在钉钉看有没有dingtalk字符串
  * @returns {boolean}

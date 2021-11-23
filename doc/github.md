@@ -2,6 +2,8 @@
 
 ## github1s模仿vscode
 
+.也可以
+
 
 
 ## github镜像站(适用clone)

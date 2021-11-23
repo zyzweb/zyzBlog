@@ -2,7 +2,7 @@
 
 双指放大缩小失效  睡眠模式再唤醒
 
-sudo spctl --master-disable  // 系统是OS Sierra(10.12_10.13)以上,需要用终端打开 允许任何来源
+sudo spctl --master-disable  // 系统是OS Sierra(10.12_10.13)以上,需要用终端打开 **允许任何来源**
 
 触发角设置桌面操作方式
 
@@ -13,6 +13,10 @@ finder建立smart文件夹
 https://github.com/Caldis/Mos/releases/   mac鼠标辅助软件
 
 启动3指拖移
+
+spotlight中command + l 快速定位到词典
+
+better touch bar  双指重按全屏/退出全屏
 
 ## 文件夹
 
@@ -58,6 +62,21 @@ Adobe_Zii破解adobe软件
 
 下载软件FDM https://www.freedownloadmanager.org/zh/   
 
+
+
+### 执行shell脚本的方式
+
+```shell
+#方法一
+chmod +x ./test.sh  #使脚本具有执行权限
+./test.sh  #执行脚本
+
+#方法二
+sh test.sh   #用/bin/sh来执行
+```
+
+
+
 ## 各种路径
 
 Library：这个文件夹包含了字体、网络插件、还有其他一些App需要的文件，对Mac的所有用户都开放
@@ -73,7 +92,11 @@ Library：这个文件夹包含了字体、网络插件、还有其他一些App�
 /Users/zhuyuanzheng/.nvm/versions/node/v14.17.0/bin //node安装的全局环境变量
 
 ```bash
-$ echo $PATH
+env  #查看所有环境变量
+set  #显示所有本地定义的shell变量
+export TEST="Hello" #设置环境变量(只在当前shell生效)
+unset TEST  #清除环境变量
+echo $PATH  #显示环境变量PATH
 /Users/zhuyuanzheng/.nvm/versions/node/v14.17.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 # 按照优先级进行排序,分别为node全局环境变量/用户创建的环境变量/系统自带的环境变量/shell环境变量/
 ```
@@ -208,3 +231,43 @@ iphone连接Mac--打开quickTime--新建影片录制--切换摄像头和麦克�
 sudo rm ~/Library/Preferences/com.apple.appstore.plist
 
 Aa123456
+
+### 软链接与硬链接(https://slarker.me/mac-file-link/)
+
+ 软链接类似windows的快捷方式,硬链接类似对象的指针,修改一个地方,其他地方也失效
+
+### homebrew
+
+```shell
+brew list #查看安装过的包
+brew list nvm #查看nvm安装路径
+brew install mongod  #搜索包
+brew update   #更新homebrew
+brew cask search qq  #搜索软件
+brew cask install cheatsheet google-chrome #一键安装多个软件
+
+#查看homebrew源
+git -C "$(brew --repo)" remote get-url origin  #homebrew源
+git -C "$(brew --repo homebrew/core)" remote get-url origin  #homebrew/core源
+git -C "$(brew --repo homebrew/cask)" remote get-url origin  #homebrew/cask源
+```
+
+
+
+参考链接:
+
+[mac/Linux设置和查看环境变量](https://www.jianshu.com/p/900da3657078)
+
+[Homebrew查看并修改源配置](https://allanhao.com/2020/07/26/homebrew-source/)
+
+[iterm2 中设置option箭头快捷键](https://www.jianshu.com/p/6f7dafc55c7e)
+
+[无法安装应用](https://www.macwk.com/article/macos-file-damage?source=macwk-dmg-installer)
+
+[应用签名和应用公证](https://www.macwk.com/article/macos-app-signatures?source=macwk-installer)
+
+[安装command line tools](https://www.macwk.com/article/macos-command-line-tools-cannot-be-installed)
+
+[mac鉴定](https://item.taobao.com/item.htm?spm=a1z10.1-c.w4004-17574713754.2.35da1f73kxwc3j&id=520817696604)
+
+机器背面都有序列号，直接官网注册查看就好

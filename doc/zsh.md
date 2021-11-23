@@ -49,6 +49,26 @@ gst='git status'
 
 
 
+### 常用插件
+
+extract  //解压支持各种格式
+
+esc  //按2下esc自动补上sudo
+
+cp //复制显示进度条
+
+vi-mode  //vim插件
+
+
+
+### 常用命令
+
+```bash
+zsh_stats  #使用频率前 20 的命令
+```
+
+
+
 ### 卸载zsh
 
 ```bash

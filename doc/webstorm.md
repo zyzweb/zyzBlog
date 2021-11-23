@@ -1,3 +1,11 @@
+### 小技巧
+
+注册个账号,同步设置
+
+
+
+### 彻底删除webstorm
+
 首先用腾讯柠檬卸载
 
 ```bash
@@ -12,7 +20,7 @@ cd ~/Library/Caches/JetBrains
 
 icon主题  Atom Material Icons
 
-## 使用插件 
+## 使用插件
 
 Translation  翻译并替换
 
@@ -69,6 +77,8 @@ ws自带jest单元测试，具体可以【帮助】->[学习ide功能]了解详�
 [查看重复代码](https://juejin.cn/post/6963835326821302303)
 
 ## 参考链接:
+
+[webstorm激活码](http://www.webstorm.vip/)
 
 [WebStorm 关闭自动保存功能添加*星星标记](https://blog.csdn.net/fisherapp1995/article/details/85063199)
 

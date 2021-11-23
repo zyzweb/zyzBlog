@@ -125,6 +125,8 @@ SSR-Win
 
 编辑服务器删除服务器---SSR服务器订阅设置---更新SSR服务器订阅(不通过代理)
 
+负载均衡会轮流使用每个节点
+
 负载均衡测速度  双击连接上的数字关闭连接  点击节点名称切换节点
 
 SwitchyOmega 设置两个情景模式  proxy(socks5 127.0.0.1 1080)  auto-switch 
@@ -135,7 +137,7 @@ ssr(shadowSocksR) 系统代理模式-直连模式 代理规则-全局
 
 有问题: 管理员权限运行cmd命令行，输入 netsh winsock reset，重启电脑后解决
 
-------
+
 
 aff (affiliate)推广链接
 
@@ -147,7 +149,7 @@ aff (affiliate)推广链接
 
 BGP：BGP 在机场的语境下通常是一个 IP 在多个运营商的网络中均为直连，不经过第三运营商，利用 ipt­a­bles 或相关软件通过将去海外 VPS 的流量加一层国内转发。所以，BGP 是中转的一种。BGP 中转服务器到海外流量的转发可以通过公网，内网等途径
 
-------
+
 
 ios软件 Potatso Lite下载 复制到safari
 
@@ -173,6 +175,8 @@ cn2有qos
 
 ## 测速
 
+延迟测试方法 CONNECT
+
 使用 speedtest.net   开启全局代理之后测试
 
 谷歌云速度 最快 20万kbps
@@ -181,7 +185,7 @@ youtube 最高7w   hkpro8
 
 iphone 8 极限速度 180mb/s  **场景模式选择代理**
 
-![image-20210619223134580](https://gitee.com/zyzcode/gitee-pic/raw/master/image-20210619223134580.png)
+<img src="https://gitee.com/zyzcode/gitee-pic/raw/master/image-20210619223134580.png" alt="image-20210619223134580" style="zoom:33%;" />
 
 
 
@@ -203,9 +207,13 @@ mac 用[clashX](https://github.com/yichengchen/clashX/releases)
 
 4.v2Ray(目前比较主流,特点支持协议和算法多,弹性大,相对ss/ssR更安全,使用vmess+tls加密)
 
+  现在更新到vless 比ssr速度要快一点
+
 5.torjan (相当于v2Ray的简化版,只支持 websocket+tls,速度比v2Ray速度快一些)
 
-6.xRay
+ torjan-go速度更高
+
+6.xRay  目前最好
 
 ios  i2Ray (3.99美元)  Shadowrocket(2.99美元)(性价比高)
 
@@ -219,7 +227,13 @@ BGP和LEPL都是中转机场,相对应直连机场效果更好
 
 BGP保证了各个不同宽带服务商连接的速度
 
-BGP保证了各个不同宽带服务商连接的速度，但是还是要过墙，IPLC不会过墙，专线
+BGP保证了各个不同宽带服务商连接的速度，但是还是要过墙，IPLC(专线)不会过墙，专线
+
+BGP和IPLC比较稳定 不会经常要切换节点
+
+
+
+软路由是linux系统可以100%对科学上网加解密  客户端和硬路由都达不到,软路由的速度还是最快
 
 ## Shadowrocket更新方法(更新其他非自己appID购买的app也是同理)
 
@@ -231,7 +245,9 @@ shadowsocksX-NG-R8--服务器设置--删除服务器选项
 
 clashX支持 V2ray/trojan协议
 
-clashX设置规则,然后在Switch Omega中切换
+clashX设置全局代理,取消系统代理,然后在Switch Omega中切换
+
+clashX设置规则,设置系统代理,配置文件进行如下设置
 
 PROCESS-NAME,Google Chrome Helper,🔰国外流量
 
@@ -247,6 +263,14 @@ PAC   https://github.com/breakwa11/gfw_whitelist
 
 ACL
 
+[lhie1大佬规则](https://raw.githubusercontent.com/lhie1/Rules/master/Shadowrocket/Complete.conf)
+
+
+
+
+
+机场使用cf(cloud flare) 百度cdn验证没办法签到
+
 
 
 ## 参考链接:
@@ -254,6 +278,8 @@ ACL
 [gfwlist](https://github.com/gfwlist/gfwlist)
 
 [订阅转换器-V2ray,Clash,SSR,SS等订阅链接在线转换](https://subconverter.speedupvpn.com/)
+
+[订阅转换]([https://acl4ssr.netlify.app/](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbnh2bFI1QXVsZlVhY2hjaEkwUTVuVmdHeEtGUXxBQ3Jtc0ttZzVxZkFRRWtFak41dEJOWkQySTlxMFV2OHVnSlV1OVlMVWZnbnBkcGkxeDNfTHpjRlZyei0waXRlNS1UQ1duYl9ZRnF4dU9qS0hUZHVmVGUyMXh5NjBHSUtrWHctamM4ZndCZ3hmMHR4eTloZXRyRQ&q=https%3A%2F%2Facl4ssr.netlify.app%2F))
 
 [iphone testflight翻墙](https://github.com/bannedbook/fanqiang/wiki/iphone%E7%BF%BB%E5%A2%99)
 

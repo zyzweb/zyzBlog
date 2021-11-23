@@ -24,9 +24,13 @@
 
 **DFU（Development Firmware Upgrade**)  开发者模式
 
+Springboard（iPhone主页界面的管理器）
+
+iTunes
+
 ## 屏蔽越狱检测插件
 
-**主流有这几个:**   A-Bypass  FLYJB屏蔽越狱(目前用这个)    LIberty Lite
+**主流有这几个:**   A-Bypass  FLYJB屏蔽越狱(目前用这个 0.2.5.6 XsF1re)    LIberty Lite
 
 **注意:** 安装的时候要安装上插件依赖的插件才能生效
 
@@ -34,11 +38,27 @@
 
 蚂蚁源 https://apt.cydia.love/
 
+破解插件源  repo.hackyouriphone.org
+
+付费插件源   repo.packix.com
+
+小苹果  pt.cydiabc.top
+
+贴吧源 apt.cydiaba.cn
+
+
+
+
+
+搜索后选择安装时可以不急着确认，选择继续队列，可以添加多个要安装的插件后再按确认一起安装，这样的话避免了频繁的重启Springboard
+
+安装后的插件如果有设置选项，通常会在 [设置] 内的一堆已经安装软件中间，如果找不到已安装的插件设置，有可能是因为没有安装PreferenceLoader这个插件，安装过后应该就可以看到插件的设置了
+
 ## 问题
 
 **1.如果cydia打不开**
 
-解决: 直接在执行越狱就行了
+解决: 直接在执行越狱就行了 
 
 **2.报phone rebel case**
 
@@ -46,6 +66,8 @@
 
 **3.强制重启iphone**
 https://support.apple.com/zh-cn/guide/iphone/iph8903c3ee6/ios
+
+先按音量+ 在按音量- 然后一直按住power键
 
 
 
@@ -58,6 +80,24 @@ https://support.apple.com/zh-cn/guide/iphone/iph8903c3ee6/ios
 5. 关闭vpn
 6. 抹掉手机所有数据
 
+### 使用altStore给uncOver自签 (https://mp.weixin.qq.com/s/oSqQx-rzMRowCqcNlhlWuA)
+
+需连接usb线,处在同一个局域网中,然后运行altStore
+
+1.https://altstore.io/  下载AltServer
+
+2.iphone用数据线连接Mac  安装AltStore
+
+3.打开mail.app  设置-通用-管理插件中启用AltPlugin. mailbundle
+
+4.将unc0ver上传到iCloud,然后在iphone文件app中下载
+
+5.打开AltStore添加unc0ver
+
+6.打开AltServer 并处在同一个局域网中就可以自动续签了
+
+**更新: 在cydia中安装AltDaemon 就可以在altStore中自己续签,不需连接电脑**
+
  
 
 
@@ -67,4 +107,8 @@ https://support.apple.com/zh-cn/guide/iphone/iph8903c3ee6/ios
 ### 参考链接:
 
 [威锋越狱板块](https://www.feng.com/topic/10)
+
+[unc0ver苹果越狱常见问题整理](https://www.bilibili.com/read/cv6362750)
+
+[unc0ver设置选项](https://www.feng.com/post/12076149)
 

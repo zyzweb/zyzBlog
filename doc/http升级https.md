@@ -19,3 +19,4 @@ ca(数字证书颁发机构)申请证书,根证书需要浏览器和操作系统
 5.修改nginx.conf
 
 6.重启nginx  systemctl restart nginx
+

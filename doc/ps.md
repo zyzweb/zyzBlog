@@ -10,9 +10,13 @@ ps装免激活的,wkmac上下载
 
 ### 添加辅助线  视图--标尺  手拉
 
+### 导出切片  仅限图片--选中的切片(所有用户切片)--其他--取消将图片放进文件夹
+
 分组之后导出图
 
-合并图层 command + e
-
-导出png  command + shift + ''
+```shell
+command + e #合并图层
+command + shift + ''  #导出png
+command option shift s #导出切片
+```
 

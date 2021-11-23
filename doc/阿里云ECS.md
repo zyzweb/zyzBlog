@@ -45,6 +45,10 @@ systemctl disable nginx #禁止开机启动
 
 CNAME（Canonical Name）记录即别名记录，用来把一个域名解析成另一个域名，再由另一个域名提供源站服务
 
+DDNS (dynamic domain name system) 动态域名解析
+
+
+
 
 
 ## 开通CDN
@@ -52,6 +56,8 @@ CNAME（Canonical Name）记录即别名记录，用来把一个域名解析成�
 1.在阿里云控制台打开cdn服务
 
 2.;源站信息填ip,配置缓存策略
+
+3.设置域名解析使用CNAME   zhuyuanzheng.top解析成zhuyuanzheng.top.w.kunlunca.com
 
 ## 常见问题
 

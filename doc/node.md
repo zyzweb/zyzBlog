@@ -25,3 +25,4 @@ nvm install node   //安装最新版node
 
 
 npm install -g npm  更新npm版本
+

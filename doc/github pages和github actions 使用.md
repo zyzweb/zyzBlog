@@ -1,5 +1,3 @@
-# 	github pages和github actions 使用
-
 ### 一、建立仓库zyzBlog并新建master和gh-pages分支(**github现在默认分支为main分支,但是workflow默认为master需注意**)
 
 ### 二、在仓库设置环境变量(代码需和仓库设置保持一致)

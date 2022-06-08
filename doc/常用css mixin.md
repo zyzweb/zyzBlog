@@ -193,7 +193,7 @@
   }
 }
 
-//等边三角形 https://juejin.cn/post/6844903914161045511
+//等边三角形 ÏÏ
 @mixin triangle($direction: down, $size: 5px, $color: #F96001) {
   width: 0px;
   height: 0px;
@@ -248,6 +248,24 @@
     bottom: $bottom;
     left: $left;
     right: $right;
+  }
+}
+
+@mixin full-bg($uri) {
+  background-image: url($uri);
+  background-size: 100%;
+  background-repeat: no-repeat;
+}
+
+@mixin placeholderColor($color) {
+  ::-moz-placeholder {
+    color: $color;
+  }
+  ::-webkit-input-placeholder {
+    color: $color;
+  }
+  :-ms-input-placeholder {
+    color: $color;
   }
 }
 

@@ -21,9 +21,9 @@ ssh root@47.107.149.52 #输入yes 输入密码即可  ctrl + d 退出
 yum install -y wget && wget -O install.sh http://download.bt.cn/install/install_6.0.sh && sh install.sh   #安装centOS宝塔7.6版本(注意要开启安全组端口)
 ```
 
-![image-20210627153542548](https://gitee.com/zyzcode/gitee-pic/raw/master/image-20210627153542548.png)
+<img src="http://image.zhuyuanzheng1.top/image-20220608213921220.png" alt="image-20220608213921220" style="zoom:50%;" />
 
-Zz123456.
+
 
 ## 安装nginx
 
@@ -58,6 +58,15 @@ DDNS (dynamic domain name system) 动态域名解析
 2.;源站信息填ip,配置缓存策略
 
 3.设置域名解析使用CNAME   zhuyuanzheng.top解析成zhuyuanzheng.top.w.kunlunca.com
+
+
+
+## 域名购买
+
+* 买新的    去阿里云域名注册
+* 买已有   阿里云域名交易
+
+
 
 ## 常见问题
 

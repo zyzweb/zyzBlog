@@ -14,7 +14,7 @@ Blob、ArrayBuffer、File可以归为一类，它们都是数据
 
 
 
-![image-20211025111901654](https://gitee.com/zyzcode/gitee-pic/raw/master/image-20211025111901654.png)
+<img src="http://image.zhuyuanzheng1.top/image-20220608220413007.png" alt="image-20220608220413007" style="zoom:33%;" />
 
 
 

@@ -72,6 +72,12 @@ ws自带jest单元测试，具体可以【帮助】->[学习ide功能]了解详�
 
 *// TODO * 待做的事情
 
+### 把webstorm加入环境变量
+
+工具-创建命令行启动器- 填入/usr/local/bin/webstorm
+
+
+
 [设置prettier](https://gitee.com/zyzcode/gitee-pic/raw/master/20210724111405.png)
 
 [查看重复代码](https://juejin.cn/post/6963835326821302303)
@@ -90,5 +96,5 @@ ws自带jest单元测试，具体可以【帮助】->[学习ide功能]了解详�
 
 
 
-![image-20210804101131900](https://gitee.com/zyzcode/gitee-pic/raw/master/image-20210804101131900.png)
+<img src="http://image.zhuyuanzheng1.top/image-20220608233527570.png" alt="image-20220608233527570" style="zoom:50%;" />
 

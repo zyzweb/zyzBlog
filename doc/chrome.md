@@ -1,6 +1,6 @@
 ```bash
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --auto-open-devtools-for-tabs  #自动打开devtools
-open -n /Applications/Google\ Chrome.app/ --args --disable-web-security  --user-data-dir=/Users/zhuyuanzheng/MyChromeDevUserData/   #打开跨域浏览器
+open -n /Applications/Google\ Chrome.app/ --args --disable-web-security  --user-data-dir=/Users/zhuyuanzheng/Downloads/cors-chrome   #打开跨域浏览器 
 ```
 
 Element  左右折叠/展开元素
@@ -33,7 +33,7 @@ TCP( Transmission Control protocol,传输控制协议)是一种面向连接的�
 
 
 
-![image-20210919222833610](https://gitee.com/zyzcode/gitee-pic/raw/master/image-20210919222833610.png)
+<img src="http://zhuyuanzheng1.top/image-20220601133800451.png" alt="image-20220601133800451" style="zoom:15%;" />
 
 每个tab页有一个渲染进程,包含了排版引擎Bink和js引擎v8,并且渲染进程是运行在沙箱模式下
 
@@ -99,8 +99,19 @@ httponly主要是为了防止xss攻击,samesite(果是从第三方站点发起�
 
 
 
+### firefox
+
+可以在新标签打开post请求
+
 
 
 ### 参考链接
 
 [站点隔离](https://www.bisend.cn/blog/google-chrome-site-isolation)
+
+[跨域chrome创建快捷方式](https://juejin.cn/post/6844903929520586766)
+
+[CORB](https://juejin.cn/post/6844903831373889550)   https://juejin.cn/post/6844903664008560647
+
+[chromestatus](https://chromestatus.com/feature/5629709824032768)
+

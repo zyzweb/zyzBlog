@@ -47,13 +47,10 @@ iphonex  5.8  2436x1125  375x812
 ## 注意点:
 
 - pt与px可以换算
-
 - dpi最初是用在印刷上的,ppi是电子屏幕 可认为 dpi = ppi
-- 在移动端页面开发中尝试用到元信息配置<meta name="viewport" width="device-width">，添加这段代码后我们发现之前缩放的页面被放大了其实它的含义就是将视口设置为：CSS像素=设备像素，即我们在页面中设置的1个CSS像素大小就等价于1个设备像素大小，在PC上看不到效果，但在移动端页面开发中我们就能看到很大的差异
+- 在移动端页面开发中尝试用到元信息配置<meta name="viewport" width="device-width">，添加这段代码后我们发现之前缩放的页面被放大了其实它的含义就是将视口设置为：CSS像素=设备像素，即我们在页面中设置的1个CSS像素大小就等价于1个设备像素大小，在PC上看不到效果，但在移动端页面开发中我们就能看到很大的差异<img src="http://image.zhuyuanzheng1.top/image-20220608233128495.png" alt="image-20220608233128495" style="zoom:33%;" />
 
-------
 
-![image-20210719211559970](https://gitee.com/zyzcode/gitee-pic/raw/master/image-20210719211559970.png)
 
 ## XD下载安装
 

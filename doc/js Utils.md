@@ -1,4 +1,12 @@
 ```javascript
+// lodash  throttle  节流防抖
+//对象引用好处类似vue 更改一处其他跟着修改    坏处有些药单独处理需要深拷贝,或者出现循环引用问题
+//eg: a = {name:a}
+
+//模板字符串换行 或者使用 + 拼接
+var string = `As all string substitutions in Template Strings are JavaScript
+embed for some readable inline math`.replace(/\n/gm,"")
+
 // noinspection JSDuplicatedDeclaration,ES6ConvertVarToLetConst
 /**
  *  0: ios
@@ -16,6 +24,85 @@ function getOSType() {
     return 1;
   }
   return 2;
+}
+/**
+ *  拓展函数(不用改第三方库的代码,而是在自己项目进行拓展修改)
+ */
+sum = ((fn) => (...rest) => {
+  console.log('seven') //要拓展的代码
+  return fn(...rest)
+})(sum)
+
+/**
+*获取cookie的指定字段(这里是京东为例)或者直接在f12,cookie中查看或者在edit this cookie插件中搜索
+*多账号获取可以开无痕模式或者清掉cookie重新登录
+*/
+var CV = '单引号里面放第六步拿到的完整cookie';
+var CookieValue = CV.match(/pt_key=.+?;/) + CV.match(/pt_pin=.+?;/);
+copy(CookieValue);
+//pt_pin=jd_40857cbb8b153;pt_key=AAJiW6eeADAOwAkpJKpPt9iyfRouh0JpG5prHmZKrS2Bl-5Dx_C4w3kAEHUfgfozKhxcvS8iocI;
+
+/**
+ *  获取对象第一个属性
+ */
+Object.values(obj)[0]
+/**
+ * 固定宽度下,字体大小随字数动态改变(反比,rem是正比) 
+ * 纯数字,中英文用字符数比较   https://blog.csdn.net/z591102/article/details/108096988
+ */
+getFontSize(){
+  const length = this.rewardList[0].amount.toString().length
+  const fontSize = length <= 3 ? 0.88 : 3*0.88/length
+}
+/**
+ * node打开网址
+ */
+function openUrl(url) {
+  let child_process = require("child_process");
+  if (process.platform == "wind32") {
+    cmd = 'start "%ProgramFiles%Internet Exploreriexplore.exe"';
+  } else if (process.platform == "linux") {
+    cmd = "xdg-open";
+  } else if (process.platform == "darwin") {
+    cmd = "open";
+  }
+  child_process.exec(`${cmd} "${url}"`);
+}
+
+//node获取本地局域网ip
+var os=require('os'),
+    iptable={},
+    ifaces=os.networkInterfaces();
+for (var dev in ifaces) {
+  ifaces[dev].forEach(function(details,alias){
+    if (details.family=='IPv4') {
+      iptable[dev+(alias?':'+alias:'')]=details.address;
+    }
+  });
+}
+console.log(iptable);
+
+/**
+ * 判断文件是否存在
+ * @param {String} filePath 文件路径
+ * @return {Boolean}
+ */
+const fs = require('fs');
+function fileExists(filePath) {
+  try {
+    return fs.statSync(filePath).isFile();
+  } catch (e) {
+    return false;
+  }
+}
+
+/**
+ * 生成唯一hash
+ * @param {String} prefix
+ */
+function makeHashCode(prefix) {
+  prefix = prefix || 'hash';
+  return String(Math.random() + Math.random()).replace(/\d\.\d{4}/, `${prefix}_`);
 }
 
 /**
@@ -327,7 +414,7 @@ function getURLParameters(url) {
 getURLParameters('http://url.com/page?n=Adam&s=Smith'); // {n: 'Adam', s: 'Smith'}
 getURLParameters('google.com'); // {}
 /**
- * 获取滚动条距顶部的巨鹿
+ * 获取滚动条距顶部的距离
  */
 function topDistance() {
   return document.documentElement.scrollTop || document.body.scrollTop
@@ -344,16 +431,35 @@ function smoothScroll(element) {
 }
 smoothScroll('#fld_6')
 
+#滚动到指定元素第二种方法
+用scrollIntoView,然后在这个基础上在先获取距离document.documentElement.scrollTop || document.body.scrollTop
+在滚动一定距离用window.scrollTo
+const y = element.getBoundingClientRect().top
+window.scrollTo({ top: y, behavior: 'smooth'})
+
 /**
  * 滚动到顶部(平滑)
  */
 function scrollToTop() {
-  const c = document.documentElement.scrollTop || document.body.scrollTop;
+  const c = document.documentElement.scrollTop || document.body.scrollTop; //兼容问题
   if (c > 0) {
     window.requestAnimationFrame(scrollToTop);
     window.scrollTo(0, c - c / 8);
   }
 }
+
+//判断元素是否进入视口
+var red = document.querySelector('.red');
+    var observer = new IntersectionObserver(function(entries) {
+      entries.forEach(function(entry) {
+        if (entry.intersectionRatio > 0) {
+          console.log('目标元素进入视口');
+        } else {
+          console.log('目标元素离开视口');
+        }
+      });
+    });
+    observer.observe(red);
 
 /**
  * 加法函数（精度丢失问题）
@@ -443,6 +549,30 @@ function uuid(length, chars) {
     return result
 }
 uuid()  
+
+uuid
+/**
+\* 生成uuid
+*
+\* @export
+\* @returns
+*/
+export function generateUUID() {
+ const s = [];
+ const hexDigits = '0123456789abcdef';
+ for (let i = 0; i < 36; i++) {
+  s[i] = hexDigits.substr(Math.floor(Math.random() * 0x10), 1);
+ }
+ s[14] = '4';
+ s[19] = hexDigits.substr((s[19] & 0x3) | 0x8, 1);
+ s[8] = s[13] = s[18] = s[23] = '-';
+ const uuid = s.join('');
+ return uuid;
+}
+//nonceStr 鉴权参数    sign  鉴权参数
+const nonceStr = generateUUID().replace(/-/g, '');
+const sha256 = require('js-sha256').sha256;
+const sign = sha256(this.information.agentNo + nonceStr);
 
 
 /**
@@ -712,7 +842,23 @@ function countOccurrences(arr, value) {
 let arr = [1,2,1,2,3,3,3,3];
 console.log(countOccurrences(arr,3))//4
 
+//禁用右键
+<body oncontextmenu="return false">
+  <div></div>
+</body>
 
+
+禁用右键
+
+//千分位隔开
+var num = 123455678;
+var num1 = 123455678.12345;
+
+var formatNum = num.toLocaleString('en-US');
+var formatNum1 = num1.toLocaleString('en-US');
+
+console.log(formatNum); // 123,455,678
+console.log(formatNum1); // 123,455,678.123
 /**
  * 数字千分位隔开
  * @param num
@@ -773,7 +919,7 @@ function getExt(filename) {
 getExt('2.json') //json
   
  /**
- * 复制内容到剪贴板
+ * 复制内容到剪贴板(有兼容问题,用clipboard.js)
  * @value {String} 
  */
  function copyToBoard(value) {
@@ -790,6 +936,21 @@ getExt('2.json') //json
     return false
 }
   copyToBoard('hahah')
+
+/**
+ * 复制内容到剪贴板 (没有兼容性问题)
+ * :data-clipboard-text=   class="btn"
+ * import ClipboardJS from 'clipboard';
+ */
+function copy() {
+  const clipboard = new ClipboardJS('.btn');
+  clipboard.on('success', function (e) {
+    // tips.showTips({
+    //   msg: '复制成功'
+    // })
+    e.clearSelection();
+  });
+}
 
 /**
  * 判断函数执行次数
@@ -1065,8 +1226,4 @@ var b = objDeepCopy(arr);
 b[0].name = 33;
 console.log(b); //[{ name: 33, age: 2, sex: null }]
 console.log(arr); //[{ name: 1, age: 2, sex: null }]
-
-
-
 ```
-

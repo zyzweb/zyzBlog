@@ -1,8 +1,4 @@
-# whistle调试
-
-![image-20210612204238010](https://gitee.com/zyzcode/gitee-pic/raw/master/image-20210612204238010.png)
-
-## 常用规则:
+### 常用规则
 
 ```bash
 # www.hahaha.com http://172.16.5.140:8097/ #设置host
@@ -27,7 +23,7 @@
 # https://cdn.jyblife.com/channel/h5buy/mbuy.html http://172.16.5.215:8097/public/mbuy.html
 ```
 
-## 安装
+### 安装
 
 ```bash
 npm install -g whistle
@@ -35,7 +31,7 @@ npm install -g whistle.chii
 npm install -g whistle.inspect
 ```
 
-## 常用命令
+### 常用命令
 
 w2 start   启动whistle
 
@@ -45,7 +41,7 @@ w2 restart  重启
 
 w2 stop 停止
 
-## 控制台  http://local.whistlejs.com/
+**控制台  http://local.whistlejs.com/**
 
 
 
@@ -54,10 +50,27 @@ w2 stop 停止
 - 安装证书-信任证书(连接同一局域网且设置代理之后下载**http://rootca.pro**)
 -  **ios用safari扫描安装描述文件** 手机设置里安装信任,**且要在关于本机证书信任设置设置一下**
 - 安卓直接安装
-- **勾选2个选项**![image-20210611174241732](/Users/zhuyuanzheng/Library/Application Support/typora-user-images/image-20210611174241732.png)
+- **勾选2个选项**
 
-##  参考链接:
 
-  [whistle官网](https://wproxy.org/whistle/)
 
+### 证书下载链接:
+
+http://172.16.5.68:8899/cgi-bin/rootca
+
+http://rootca.pro
+
+
+
+### 常见问题
+
+要关闭代理,不行要退出代理软件
+
+android要用系统浏览器或者chrome不能用alook这种第三方的
+
+
+
+### 参考链接
+
+[whistle官网](https://wproxy.org/whistle/)
 

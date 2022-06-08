@@ -61,6 +61,12 @@ Ec2 S3 RDS
 
 
 
+### 名称解释
+
+MITM A man in the middle (MITM) attack  中间人攻击
+
+
+
 ## 连接方式
 
 **直连模式**
@@ -185,10 +191,6 @@ youtube 最高7w   hkpro8
 
 iphone 8 极限速度 180mb/s  **场景模式选择代理**
 
-<img src="https://gitee.com/zyzcode/gitee-pic/raw/master/image-20210619223134580.png" alt="image-20210619223134580" style="zoom:33%;" />
-
-
-
 
 
 [部分应用不能抓包](https://www.cnblogs.com/lulianqi/p/11380794.html) 参考下面文章  其他思路  用surge clash wireshark
@@ -253,6 +255,42 @@ PROCESS-NAME,Google Chrome Helper,🔰国外流量
 
 
 
+### Quantumult X
+
+
+
+http=172.16.5.68:8899, fast-open=false, udp-relay=false, tag=http-whistle
+
+http=172.16.5.68:8899, username=name, password=pwd, fast-open=false, udp-relay=false, tag=http-whistle
+
+```shell
+QuantumultX 支持5/6位的Cron表达式，如：
+⏰ 五位 → * * * * * → 分 时 日 月 年
+⏰ 六位 → * * * * * * → 秒 分 时 日 月 年
+```
+
+导入配置之后要解除关联不然会覆盖本地更改
+
+自动测速
+
+- z长按要修改的策略组-点击编辑，点击类型，修改为最后一个url-latency-benchmark
+
+虚线圆环 表示有二级菜单  长按可进入
+
+相同规则下，本地规则将覆盖远程规则，优先生效
+
+UI中的添加 只支持输入简单 ss信息
+
+**引用**支持 ss，ssr 订阅，以及 Quanx 格式的 vmess / https / trojan 订阅
+
+**使用解析器后则支持其它任何格式订阅**
+
+[重写的几种用法](https://github.com/crossutility/Quantumult-X/blob/master/rewrite.md)
+
+boxjs是一个多会话管理器,可以同时用多个账号签到
+
+
+
 ## 规则
 
 AutoProxy   https://github.com/gfwlist/gfwlist
@@ -273,6 +311,67 @@ ACL
 
 
 
+IP-CIDR 列表  老  CN-ip-cidr.txt
+
+GeoIP2 数据库  新   Country.mmdb    (Surge, Shadowrocket,QuantumultX, Clash)
+
+
+
+
+
+TUN模式 Quantumult X/Surge/Clash 均可开启，相当于开启一个虚拟网卡
+
+网易云要解锁需要专门的节点的，不是搭了策略就行
+
+
+
+透明代理:不让客户端感觉到自己被代理了,比如路由器翻墙,手机连接路由器上网
+
+
+
+**clahs,dns配置**
+
+redir-host: Clash先将域名进行解析，再将具体的IP地址响应给客户端，并且记录其对应关系。
+
+fake-ip: 不进行DNS解析，而是直接生成一个“假IP”并响应给客户端，再记录对应关系。
+
+这可以有如下两个好处：
+
+- 如果最后判定为代理，则有可能节省一次本地的DNS请求
+- 不需要担心DNS污染（因为配置文件中的DNS仅用作规则判定）
+
+
+
+#### quanx导入免流骚节点
+
+1. 复制订阅定制(不用转换)
+2. quanx 资源路径 填入 打开资源解析器  (关闭vpn开关)
+2. 
+
+### switchyOmega
+
+*AutoProxy* *规则列表网址：* https://raw.githubusercontent.com/gfwlist/gfwlist/master/gfwlist.txt
+
+gfwlist如果不行可以找镜像站
+
+**如果有其他代理,将switchyOmega改为系统代理,然后可以在外部情景模式中导入其他代理的设置**
+
+开启开解切换,修改快捷键command + e
+
+设置颜色 红黄蓝黑
+
+<img src="http://image.zhuyuanzheng1.top/image-20220608232719056.png" alt="image-20220608232719056" style="zoom:33%;" />
+
+设置AutoProxy然后把不在里面的加入进来,随时可以增删
+
+PAC proxy auto config
+
+
+
+
+
+
+
 ## 参考链接:
 
 [gfwlist](https://github.com/gfwlist/gfwlist)
@@ -282,6 +381,22 @@ ACL
 [订阅转换]([https://acl4ssr.netlify.app/](https://www.youtube.com/redirect?event=video_description&redir_token=QUFFLUhqbnh2bFI1QXVsZlVhY2hjaEkwUTVuVmdHeEtGUXxBQ3Jtc0ttZzVxZkFRRWtFak41dEJOWkQySTlxMFV2OHVnSlV1OVlMVWZnbnBkcGkxeDNfTHpjRlZyei0waXRlNS1UQ1duYl9ZRnF4dU9qS0hUZHVmVGUyMXh5NjBHSUtrWHctamM4ZndCZ3hmMHR4eTloZXRyRQ&q=https%3A%2F%2Facl4ssr.netlify.app%2F))
 
 [iphone testflight翻墙](https://github.com/bannedbook/fanqiang/wiki/iphone%E7%BF%BB%E5%A2%99)
+
+[订阅转换vmess](https://dove.589669.xyz/web)
+
+[各大影视软件VIP视频解析](https://www.appmiu.com/fortune/12259/)
+
+[多开微信恢复聊天记录](https://www.appmiu.com/apple/12953/)
+
+[cron表达式指南](https://www.kejiwanjia.com/jiaocheng/zheteng/notes/1958.html)
+
+[机场配置指南-Surgio](https://surgio.js.org/guide/custom-provider.html#shadowsocks-json-subscribe)
+
+
+
+
+
+
 
 
 

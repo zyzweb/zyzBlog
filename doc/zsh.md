@@ -10,10 +10,29 @@ zsh --version   #查看是否安装成功
 1. Mac自带ZSH，切换开启,(zsh + oh my zsh)
 
 ```bash
-chsh -s /bin/zsh
+chsh -s /bin/zsh  #切换zsh
+chsh -s /bin/bash  #切换bash
 ```
 
 2. windows可参考链接
+
+
+
+### 修改自定义标题
+
+```shell
+#参考https://www.jianshu.com/p/8b335f523e59
+#.zshrc增加下面
+
+# Uncomment the following line to disable auto-setting terminal title.
+DISABLE_AUTO_TITLE="true"
+# 设置标题栏
+function precmd () {
+  print -Pn - '\e]0;%1~\a'
+}
+```
+
+
 
 
 
@@ -51,13 +70,18 @@ gst='git status'
 
 ### 常用插件
 
-extract  //解压支持各种格式
-
-esc  //按2下esc自动补上sudo
-
-cp //复制显示进度条
-
-vi-mode  //vim插件
+```shell
+extract  #解压支持各种格式  自带的unzip也可以解压
+cp #文件复制工具，替代cp和mv命令   cp ggg.js ../a     mv剪切
+vi-mode  #vim插件
+autojump  #没有使用 (和z一样,但是用j跳转)
+z
+zsh-autosuggestions  #自动建议 (和fish共存)
+zsh-syntax-highlighting  #语法高亮
+nvm #自动切换node版本
+history  #h 查看历史命令
+sudo #按2下esc自动补上sudo
+```
 
 
 
@@ -65,6 +89,7 @@ vi-mode  //vim插件
 
 ```bash
 zsh_stats  #使用频率前 20 的命令
+source ~/.zshrc  #重启zsh
 ```
 
 

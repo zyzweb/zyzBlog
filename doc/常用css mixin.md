@@ -1,5 +1,3 @@
-# 常用css mixin
-
 ``` scss
 @function rem ($num) {
   @return $num/100 * 1rem;

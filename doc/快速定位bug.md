@@ -1,5 +1,3 @@
-# 快速定位bug
-
 一眼能看出来的除外
 
 1.看能不能抓包,安卓packet capture;ios stream;windows fiddler;

@@ -1,6 +1,6 @@
-### 一、建立仓库zyzBlog并新建master和gh-pages分支(**github现在默认分支为main分支,但是workflow默认为master需注意**)
+一. 建立仓库zyzBlog并新建master和gh-pages分支(**github现在默认分支为main分支,但是workflow默认为master需注意**)
 
-### 二、在仓库设置环境变量(代码需和仓库设置保持一致)
+二 . 在仓库设置环境变量(代码需和仓库设置保持一致)
 
 创建github个人访问令牌
 
@@ -49,6 +49,7 @@ jobs:
 3. 只需设置环境变量,不需要设置仓库变量
 4. github官方action地址 [github.com/actions](https://github.com/actions),还有[官方市场](https://github.com/marketplace?type=actions),[awesome actions](https://github.com/sdras/awesome-actions)仓库
 5. GitHub Actions可免费用于公共仓库。对于私有仓库，它具有按需付费的机制
+5. 
 
 ### 生成公钥和私钥的2种方法
 

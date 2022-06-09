@@ -45,6 +45,22 @@ mfsu   Module Federation Speed Up  umi使用(基于Module Federation)
 
 
 
+
+
+dll-plugin把公共库打包成一个单独的库文件,以后只用打包业务代码,类似vite的预构建
+
+
+
+hash的目的就是为了利用缓存
+
+### 区分hash，contenthash，chunkhash
+
+- hash：每次构建会生成一个hash。和整个项目有关，只要有项目文件更改，就会改变hash  (一般不用)
+- contenthash：和单个文件的内容相关。指定文件的内容发生改变，就会改变hash。MiniCssExtractPlugin提取css,使用
+- chunkhash：和webpack打包生成的chunk相关。每一个entry，都会有不同的hash (输出文件一般使用)
+
+
+
 ### 参考文章
 
 [webpack运行原理](https://github.com/ShowJoy-com/showjoy-blog/issues/7)

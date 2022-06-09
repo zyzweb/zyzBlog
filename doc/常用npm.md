@@ -44,6 +44,7 @@ tinypng #api调用tinypng
 tinypng-script-with-cache  #同上个
 crypto-js  #支持多种加密方式
 jsencrypt  #支持RSA
+file-saver  #保存文件  web-stream
 
 #koa相关
 koa #类似express服务器

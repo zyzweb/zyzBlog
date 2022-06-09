@@ -7,7 +7,6 @@ module.exports = {
       {
         rel: "icon",
         href: "http://image.zhuyuanzheng1.top/image-20220609004524311.png",
-        // href: "https://gitee.com/zyzcode/gitee-pic/raw/master/20210626141637.png",
       },
     ],
     [
@@ -24,8 +23,10 @@ module.exports = {
   base: "/zyzBlog/",
   description: "用Vupress架Blog",
   themeConfig: {
+    repo: 'https://github.com/zyzweb',
+    // 项目开始时间，只填写年份
+    startYear: '2020',
     logo: "http://image.zhuyuanzheng1.top/image-20220609004524311.png",
-    // logo: "https://gitee.com/zyzcode/gitee-pic/raw/master/20210626141637.png",
     navbar: [
       {
         text: "前端网站导航",
@@ -45,7 +46,7 @@ module.exports = {
         children: [{ text: "网易音乐播放器", link: "http://zhuyuanzheng1.top/zyzBlog/music/index.html" }],
       },
       {
-        text: "gitee链接",
+        text: "gitee",
         link: "https://gitee.com/zyzcode/",
       },
 
@@ -64,17 +65,17 @@ module.exports = {
     ],
 
     sidebar: [
-      {
-        text: "Home",
-        link: "/",
-        children: [
-          {
-            text: "github链接",
-            link: "https://github.com/zyzweb",
-            children: [],
-          },
-        ],
-      },
+      // {
+      //   text: "Home",
+      //   link: "/",
+      //   children: [
+      //     {
+      //       text: "github链接",
+      //       link: "https://github.com/zyzweb",
+      //       children: [],
+      //     },
+      //   ],
+      // },
       {
         isGroup: true,
         text: "Guide",

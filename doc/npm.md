@@ -174,7 +174,7 @@ source ~/.zshrc  #重启配置  vscode中也要重启配置
 ### publish流程(要切换到npm网址)
 
 ```javascript
-1.npm login 输入账号zyz1609062132  密码zyz516194  邮箱1609062132@qq.com(若为第一次需 npm adduser )
+1.npm login 输入账号zyz1609062132  密码xxx  邮箱1609062132@qq.com(若为第一次需 npm adduser )
 2.npm init (不要npm init -y) 自己设定 不能发布和别人重复的包
 3.npm publish
 4.npm unpublish 包名@版本号 //  npm unpublish zyznizuinb@1.0.3

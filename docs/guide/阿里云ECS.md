@@ -1,4 +1,4 @@
-1核2G内存1M
+ 1核2G内存1M
 
 Intel(R) Xeon(R) Platinum 8163 CPU @ 2.50GHz
 

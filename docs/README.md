@@ -10,7 +10,6 @@ heroText: zyz Blog
 tagline: zyz 个人博客
 actionText: 开始阅读 →
 actionLink: guide/Mac使用.html
-navbar: false
 ---
 
 <!-- features:

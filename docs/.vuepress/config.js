@@ -24,8 +24,17 @@ module.exports = {
       lang: "zh-CN",
     },
   },
+  plugins: [
+    [
+      "@vuepress/google-analytics",
+      {
+        ga: "G-3S4QHQFEKZ",
+      },
+    ],
+  ],
   themeConfig: {
     subSidebar: "auto",
+    logo: "http://image.zhuyuanzheng1.top/image-20220609004524311.png",
     lastUpdated: "上次更新",
     // type: 'blog',
     nav: [

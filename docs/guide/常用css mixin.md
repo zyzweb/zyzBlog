@@ -1,8 +1,54 @@
 ``` scss
+// 禁止用户选择
+user-select: none;
+// 禁止用户点击
+pointer-events: none;
+// 禁用状态提示
+cursor: not-allowed;
+
+// 刘海屏处理
+//constant在iOS < 11.2的版本中生效，env在iOS >= 11.2的版本中生效,需要同时设置
+//<meta name="viewport" content="viewport-fit=cover">需要指定viweport-fit才生效
+//safe-area-inset-bottom safe-area-inset-left safe-area-inset-right safe-area-inset-top
+body {
+  padding-bottom: constant(safe-area-inset-bottom);
+  padding-bottom: env(safe-area-inset-bottom);
+}
+
+// 媒体查询 media query(与css相反,写在前面的先生效)
+@media only screen and (min-width:1200px) and (max-width:1400px) {
+  font-size: 2.5vw;
+}
+@media only screen and(min-width:960px) and (max-width:1200px) {
+  font-size: 3vw;
+}
+
 @function rem ($num) {
   @return $num/100 * 1rem;
 }
 
+// 横屏检测
+window.addEventListener("resize", ()=>{
+    if (window.orientation === 180 || window.orientation === 0) { 
+      // 正常方向或屏幕旋转180度
+        console.log('竖屏');
+    };
+    if (window.orientation === 90 || window.orientation === -90 ){ 
+       // 屏幕顺时钟旋转90度或屏幕逆时针旋转90度
+        console.log('横屏');
+    }  
+});
+// ____________________________
+@media screen and (orientation: portrait) {
+  /*竖屏...*/
+} 
+@media screen and (orientation: landscape) {
+  /*横屏...*/
+}
+
+
+// 1px或者用svg
+border: thin solid red  (推荐)
 @mixin setTopLine($color: rgba(0,0,0,0.1)) {
  content: " ";
  position: absolute;
@@ -233,6 +279,7 @@
     display: -webkit-box;
     -webkit-line-clamp: $rowCount;
     -webkit-box-orient: vertical;
+    word-wrap:break-word;
   }
 }
 
@@ -266,8 +313,4 @@
     color: $color;
   }
 }
-
 ```
-
-
-

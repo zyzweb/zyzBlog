@@ -2,8 +2,8 @@ module.exports = {
   title: "zyz Blog",
   description: "zyz Blog",
   theme: "reco",
-  base: "/",
-  // base: "/zyzBlog/",
+  // base: "/",
+  base: "/zyzBlog/",
   head: [["meta", { name: "baidu-site-verification", content: "code-uv0neUcUyD" }]],
   // head: [
   //   [
@@ -48,11 +48,25 @@ module.exports = {
     nav: [
       { text: "首页", link: "/" },
       {
-        text: "冴羽的 JavaScript 博客",
+        text: "前端网站导航",
         items: [
-          { text: "Github", link: "https://github.com/mqyqingfeng" },
-          { text: "掘金", link: "https://juejin.cn/user/712139234359182/posts" },
+          { text: "前端网站导航", link: "http://zhuyuanzheng1.top/zyzBlog/前端网站导航.html" },
+          { text: "css常用技巧", link: "http://zhuyuanzheng1.top/zyzBlog/css常用技巧.html" },
+          { text: "vuejs网站导航", link: "http://zhuyuanzheng1.top/zyzBlog/vuejs网站导航.html" },
         ],
+      },
+      {
+        text: "读书笔记",
+        link: "http://zhuyuanzheng1.top/zyzBlog/read/",
+        // link: "https://zyzweb.github.io/zyzBlog/read/index.html",
+      },
+      {
+        text: "做过的项目",
+        items: [{ text: "网易音乐播放器", link: "http://zhuyuanzheng1.top/zyzBlog/music/index.html" }],
+      },
+      {
+        text: "gitee",
+        link: "https://gitee.com/zyzweb/",
       },
     ],
     sidebar: [
@@ -87,17 +101,14 @@ module.exports = {
           { title: "whistle调试", path: "/guide/whistle调试" },
           { title: "Xcode下载", path: "/guide/Xcode下载" },
           { title: "安卓玩机", path: "/guide/安卓玩机" },
-          { title: "1password", path: "/guide/1password" },
           { title: "阿里云ECS", path: "/guide/阿里云ECS" },
           { title: "安装java环境", path: "/guide/安装java环境" },
           { title: "安装rz sz", path: "/guide/安装rz sz" },
           { title: "部署", path: "/guide/部署" },
-          { title: "测试", path: "/guide/测试" },
           { title: "常见scheme总结", path: "/guide/常见scheme总结" },
           { title: "常用npm", path: "/guide/常用npm" },
           { title: "搭建github文件加速", path: "/guide/搭建github文件加速" },
           { title: "待解决的问题", path: "/guide/待解决的问题" },
-          { title: "二进制Blob", path: "/guide/二进制Blob" },
           { title: "构建日志", path: "/guide/构建日志" },
           { title: "薅羊毛", path: "/guide/薅羊毛" },
           { title: "技术胖收藏夹", path: "/guide/技术胖收藏夹" },
@@ -157,7 +168,6 @@ module.exports = {
           { title: "python", path: "/guide/python" },
           { title: "sass", path: "/guide/sass" },
           { title: "typescript", path: "/guide/typescript" },
-          { title: "ui", path: "/guide/ui" },
           { title: "v8垃圾回收机制", path: "/guide/v8垃圾回收机制" },
           { title: "vim", path: "/guide/vim" },
           { title: "vite", path: "/guide/vite" },
@@ -175,4 +185,4 @@ module.exports = {
       },
     ],
   },
-};
+}

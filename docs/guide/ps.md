@@ -2,7 +2,7 @@ ps装免激活的,wkmac上下载
 
 ### ps安装webp插件
 
-<img src="http://image.zhuyuanzheng1.top/image-20220608232342682.png" alt="image-20220608232342682" style="zoom:33%;" />
+<img src="https://image.zhuyuanzheng1.top/image-20220608232342682.png" alt="image-20220608232342682" style="zoom:33%;" />
 
 ### 
 

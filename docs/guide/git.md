@@ -60,7 +60,7 @@ git push gitee master
 
 ### 问题一:
 
-<img src="http://image.zhuyuanzheng1.top/image-20220608213625515.png" alt="image-20220608213625515" style="zoom:50%;" />
+<img src="https://image.zhuyuanzheng1.top/image-20220608213625515.png" alt="image-20220608213625515" style="zoom:50%;" />
 
 **解决方案**
 
@@ -74,7 +74,7 @@ git config --global --unset https.proxy
 
 git did not exit cleanly (exit code 128) git torroiseGit
 
-<img src="http://image.zhuyuanzheng1.top/image-20220608234311883.png" alt="image-20220608234311883" style="zoom:45%;" />
+<img src="https://image.zhuyuanzheng1.top/image-20220608234311883.png" alt="image-20220608234311883" style="zoom:45%;" />
 
 **解决方案:**
 
@@ -154,23 +154,26 @@ git rebase #可能合并多次
 
 1.初始
 
-<img src="http://image.zhuyuanzheng1.top/image-20220607224113396.png" alt="image-20220607224113396" style="zoom:33%;" />
+<img src="https://image.zhuyuanzheng1.top/image-20220607224113396.png" alt="image-20220607224113396" style="zoom:33%;" />
 
 1. 在master执行git merge tmp
 
-<img src="http://image.zhuyuanzheng1.top/image-20220607224044889.png" alt="image-20220607224044889" style="zoom:33%;" />
+<img src="https://image.zhuyuanzheng1.top/image-20220607224044889.png" alt="image-20220607224044889" style="zoom:33%;" />
 
 1. 在master执行git rebase tmp
 
-<img src="http://image.zhuyuanzheng1.top/image-20220607224159928.png" alt="image-20220607224159928" style="zoom:33%;" />
+<img src="https://image.zhuyuanzheng1.top/image-20220607224159928.png" alt="image-20220607224159928" style="zoom:33%;" />
 
 ### 设置公私钥
 
 ```bash
 cd ~/.sshls -al  #查看有无公私钥#没有公私钥的话生成公私钥
-ssh-keygen -t rsa -C "zyz1609062132@gmail.com" #一路enterc
+ssh-keygen -t rsa -C "zyz1609062132@gmail.com" #一路enter
 cat ~/.ssh/id_rsa.pub  #复制到github中,可以不用填title
 ssh -T git@github.com #测试ssh 用ssh链接下载才能用ssh提交
+
+
+ssh-keygen -t rsa -C '1609062132@qq.com' -f ~/.ssh/gitee_id_rsa
 ```
 
 ### git命令
@@ -181,9 +184,11 @@ git config --system --list  #查看系统config
 git config --global --list  #查看当前用户（global）配置
 git config --list  #查看当前仓库配置信息(包含全局和本地,优先用本地)
 
-## 设置本地仓库用户名和邮箱(在项目仓库进行设置)
+## 设置本地仓库用户名和邮箱(在项目仓库进行设置)  提交之前进行设置
+git init  
 git config user.name 'zhuyuanzheng'
-git config user.email 'yuanzheng.zhu@jyblife.com'
+git config user.email 'yuanzheng.zhu@transsnet.com'
+git config core.ignorecase false
 
 #设置全局用户名和邮箱
 git config --global user.name 'zyz1609062132'
@@ -323,7 +328,7 @@ issues 先讨论在插入代码,和pull request相反
 
 **github网页创建分支和删除分支**
 
-<img src="http://image.zhuyuanzheng1.top/image-20220608213459851.png" alt="image-20220608213459851" style="zoom:50%;" />
+<img src="https://image.zhuyuanzheng1.top/image-20220608213459851.png" alt="image-20220608213459851" style="zoom:50%;" />
 
 **迁入新仓库**
 
@@ -401,3 +406,8 @@ s / 聚焦搜索
 [learn git Branching小游戏](https://learngitbranching.js.org/?locale=zh_CN)
 
 [git钩子husky和pre-commit](https://segmentfault.com/a/1190000015953265)
+
+[git配置多个ssh](https://gitee.com/help/articles/4229#article-header0)
+
+
+

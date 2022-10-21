@@ -18,7 +18,7 @@ ssh root@47.107.149.52 #输入yes 输入密码即可  ctrl + d 退出
 yum install -y wget && wget -O install.sh http://download.bt.cn/install/install_6.0.sh && sh install.sh   #安装centOS宝塔7.6版本(注意要开启安全组端口)
 ```
 
-<img src="http://image.zhuyuanzheng1.top/image-20220608213921220.png" alt="image-20220608213921220" style="zoom:50%;" />
+<img src="https://image.zhuyuanzheng1.top/image-20220608213921220.png" alt="image-20220608213921220" style="zoom:50%;" />
 
 
 

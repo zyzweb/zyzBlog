@@ -360,11 +360,15 @@ gfwlist如果不行可以找镜像站
 
 设置颜色 红黄蓝黑
 
-<img src="http://image.zhuyuanzheng1.top/image-20220608232719056.png" alt="image-20220608232719056" style="zoom:33%;" />
+<img src="https://image.zhuyuanzheng1.top/image-20220608232719056.png" alt="image-20220608232719056" style="zoom:33%;" />
 
 设置AutoProxy然后把不在里面的加入进来,随时可以增删
 
 PAC proxy auto config
+
+
+
+速蛙云线路检测
 
 
 
@@ -391,3 +395,10 @@ PAC proxy auto config
 [cron表达式指南](https://www.kejiwanjia.com/jiaocheng/zheteng/notes/1958.html)
 
 [机场配置指南-Surgio](https://surgio.js.org/guide/custom-provider.html#shadowsocks-json-subscribe)
+
+
+
+
+
+
+

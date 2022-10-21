@@ -78,7 +78,7 @@ fi
 
 5. 点击 iTerm2 的设置界面 Perference-> Profiles -> Default -> Advanced -> Triggers 的 Edit 按钮
 
-<img src="http://image.zhuyuanzheng1.top/image-20220608214117616.png" alt="image-20220608214117616" style="zoom:50%;" />
+<img src="https://image.zhuyuanzheng1.top/image-20220608214117616.png" alt="image-20220608214117616" style="zoom:50%;" />
 
 
 

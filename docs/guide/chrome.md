@@ -1,9 +1,23 @@
 ```bash
 /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --auto-open-devtools-for-tabs  #自动打开devtools
 open -n /Applications/Google\ Chrome.app/ --args --disable-web-security  --user-data-dir=/Users/zhuyuanzheng/Downloads/cors-chrome   #打开跨域浏览器 
+
+/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --remote-debugging-port=9222 --user-data-dir=
 ```
 
+## 使用
+
+Debugger 不用重新刷新页面
+
+**font flex grid 支持调试面板**
+
+**element 跟踪堆栈帮助理清前端框架的运行流程**
+
 Element  左右折叠/展开元素
+
+devtool和浏览器都可以 开启实验功能
+
+<img src="/Users/zhuyuanzheng/Library/Application Support/typora-user-images/image-20220809112159830.png" alt="image-20220809112159830" style="zoom:30%;" />
 
 
 
@@ -33,7 +47,7 @@ TCP( Transmission Control protocol,传输控制协议)是一种面向连接的�
 
 
 
-<img src="http://zhuyuanzheng1.top/image-20220601133800451.png" alt="image-20220601133800451" style="zoom:15%;" />
+<img src="https://image.zhuyuanzheng1.top/image-20220601133800451.png" alt="image-20220601133800451" style="zoom:15%;" />
 
 每个tab页有一个渲染进程,包含了排版引擎Bink和js引擎v8,并且渲染进程是运行在沙箱模式下
 
@@ -87,21 +101,45 @@ http0.9只是为了传输html;http1.0增加了多种文件类型,状态码,cache
 以我们默认页面中可以引用任意第三方资源,然后又引入CSP策略来加以限制;默认 XmlHttp Request和
 Fetch不能跨站请求资源,然后又通过CORS策略来支持其跨域。
 
-CSRF Cross-site request forgery,所以又称为“跨站请求伪造”
-
-csrf条件
-
-1.  目标站点一定要有CSRF漏洞
-2.  用户要登录过目标站点,并且在浏览器上保持有该站点的登录状态
-3. 需要用户打开一个第三方站点,可以是黑客的站点,也可以是一些论坛。
-
-httponly主要是为了防止xss攻击,samesite(果是从第三方站点发起的请求,那么需要浏览器禁止发送某些关键 Cookie数据到服务器)主要是为了防止csrf攻击,csrf token  请求头的origin和refer也可以防止csrf攻击
 
 
+## 本地覆盖
+
+<img src="https://image.zhuyuanzheng1.top/image-20220907153337526.png" alt="image-20220907153337526" style="zoom:50%;" /><img src="https://image.zhuyuanzheng1.top/image-20220907153412335.png" alt="image-20220907153412335" style="zoom:20%;" />
+
+
+
+
+
+## coverage 可以查看未使用的代码,删除
+
+<img src="https://image.zhuyuanzheng1.top/image-20220907155702788.png" alt="image-20220907155702788" style="zoom:30%;" />
+
+
+
+
+
+<img src="https://image.zhuyuanzheng1.top/image-20220907160359034.png" alt="image-20220907160359034" style="zoom:50%;" />
+
+放在上面可以判断是否是sourcemap,sourcemap只有在f12打开时候才会加载,不会影响普通用户使用体验
+
+
+
+## performance使用
+
+<img src="https://image.zhuyuanzheng1.top/image-20220914011345246.png" alt="image-20220914011345246" style="zoom:50%;" />
+
+点击可以在摘要看到加载各个阶段耗时
+
+在调用树可以看到哪个函数调用花费的时间
 
 ### firefox
 
 可以在新标签打开post请求
+
+
+
+
 
 
 
@@ -115,3 +153,14 @@ httponly主要是为了防止xss攻击,samesite(果是从第三方站点发起�
 
 [chromestatus](https://chromestatus.com/feature/5629709824032768)
 
+[thisisunsafe的神奇之chrome浏览器打不开不安全的https网页](https://blog.csdn.net/qq_30546099/article/details/114332243)
+
+[线上调试sourcemap](https://juejin.cn/post/6844903905684357127)
+
+[chrome update changelog](https://chromereleases.googleblog.com/)
+
+[chrome devtools changelog](https://developer.chrome.com/zh/blog/)
+
+[Chrome 插件开发](https://www.cnblogs.com/leiting/p/14007516.html)
+
+[chromium源码](https://source.chromium.org/chromium/chromium/src/+/main:apps/app_lifetime_monitor.cc)

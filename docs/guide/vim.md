@@ -70,7 +70,7 @@ echo sss > a.json
 node -version > b.json
 ```
 
-<img src="http://image.zhuyuanzheng1.top/image-20220526220411169.png" alt="image-20220526220411169" style="zoom:50%;" />
+<img src="https://image.zhuyuanzheng1.top/image-20220526220411169.png" alt="image-20220526220411169" style="zoom:50%;" />
 
 
 

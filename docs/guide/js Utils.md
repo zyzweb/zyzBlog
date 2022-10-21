@@ -3,6 +3,25 @@
 //对象引用好处类似vue 更改一处其他跟着修改    坏处有些药单独处理需要深拷贝,或者出现循环引用问题
 //eg: a = {name:a}
 
+// 关闭窗口
+// 老式
+window.opener=null;
+window.open('about:blank','_self');
+window.close();
+//新式(优先用这个)
+window.open("about:blank", "_top").close() 
+或 window.open('about:blank','_self').close()
+
+// 建立多个数组 (相同值)
+Array.from({ length: 20 }).map((item, index) => ({
+  index: 1,
+  text: '你好',
+  url: '大家好'
+}))
+
+// 建立多个数组  (不同值)
+[...new Array(5).keys()] //  [0, 1, 2, 3, 4]
+
 //模板字符串换行 或者使用 + 拼接
 var string = `As all string substitutions in Template Strings are JavaScript
 embed for some readable inline math`.replace(/\n/gm,"")
@@ -68,6 +87,9 @@ function openUrl(url) {
   }
   child_process.exec(`${cmd} "${url}"`);
 }
+
+// js触发键盘事件
+document.dispatchEvent(new KeyboardEvent('keydown', { keyCode: 39}))
 
 //node获取本地局域网ip
 var os=require('os'),
@@ -200,6 +222,13 @@ timeLeft(hmin) {
     time = '0' + time
   }
   return `${hour} 小时 ${min} 分 ${time} 秒`
+}
+
+//  歌曲时间转换为分秒
+const formatDuration = (duration: number): string => {
+  const minute = Math.floor(duration / 60)
+  const second = Math.floor(duration % 60)
+  return `${minute < 10 ? '0' + minute : minute}:${second < 10 ? '0' + second : second}`
 }
 
 // 时间格式化

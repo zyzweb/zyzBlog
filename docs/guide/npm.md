@@ -16,6 +16,14 @@ C:\Program Files\nodejs\node_modules  //使用nvm安装的node的全局包路径
 
 
 
+## 安装自己的npm包
+
+```scss
+npm install git@github.com:ElemeFE/element.git
+```
+
+
+
 
 
 ### 常用命令
@@ -47,8 +55,10 @@ npm v node-sass repository.url  #查看包的仓库地址
 cnpm 装包要加 -S -D  npm #不加默认装在dependencies
 npm help install #查看某条命令的详细帮助
 npm publish  #将模块发布到npmjs.com中 需要先登录
+npm unpublish ggg@1.0.1  #删除已经publish的包
 npm prune #移除不在package.json却在node_moduels中的包
-npx browserslist #打印出所有浏览器版本支出情况  执行node_modules中的命令
+npx browserslist #打印出配置项中所有浏览器列表  执行node_modules中的命令
+npm version patch #改变最后一位的版本 类似还是有minor  major  
 ```
 
 ### 设置项目npm配置
@@ -81,7 +91,7 @@ browser #定义 npm 包在 browser 环境下的入口文件
 **如果程序执行完会直接结束进程的，那么`-inspect`会一闪而过，断点信号还没发送出去前就结束了，断点根本不起作用，这种情况可以用`-inspect-brk`启动调试器，使得脚本可以代码执行之前`break`**
 ```
 
-<img src="http://image.zhuyuanzheng1.top/image-20220211140514482.png" alt="image-20220211140514482" style="zoom:70%;" />
+<img src="https://image.zhuyuanzheng1.top/image-20220211140514482.png" alt="image-20220211140514482" style="zoom:70%;" />
 
 
 
@@ -93,7 +103,7 @@ browser #定义 npm 包在 browser 环境下的入口文件
 
 ​       执行  npm cache clean -f  和  npm i -f    强制npm获取远端资源
 
-<img src="http://image.zhuyuanzheng1.top/image-20220608232009460.png" alt="image-20220608232009460" style="zoom:50%;" />
+<img src="https://image.zhuyuanzheng1.top/image-20220608232009460.png" alt="image-20220608232009460" style="zoom:50%;" />
 
 ​      npm i npm -g   //升级npm 
 
@@ -125,7 +135,7 @@ npm_mirror: https://npm.taobao.org/mirrors/npm/
 
 环境变量设置在用户变量里
 
-<img src="http://image.zhuyuanzheng1.top/image-20220608232036938.png" alt="image-20220608232036938" style="zoom:33%;" />
+<img src="https://image.zhuyuanzheng1.top/image-20220608232036938.png" alt="image-20220608232036938" style="zoom:33%;" />
 
 
 
@@ -190,6 +200,13 @@ nrm use taobao #使用源
 nrm add company http://npm.company.com/  #添加源
 nrm del company  #删除源
 nrm test #测试
+```
+
+### 自定义script
+
+```shell
+"predeploy": "npm run build && make setup_release",  
+"deploy": "serve -s build",   #deploy可以修改为其他名字
 ```
 
 

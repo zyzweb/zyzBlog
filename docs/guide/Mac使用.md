@@ -1,5 +1,3 @@
-# Mac使用
-
 ### 安装ios/ipados app
 
 
@@ -227,9 +225,10 @@ Library #这个文件夹包含了字体、网络插件、还有其他一些App�
 ```bash
 env  #查看所有环境变量
 set  #显示所有本地定义的shell变量
-export TEST="Hello" #设置环境变量(只在当前shell生效)
+export TEST="Hello" #设置环境变量(只在当前shell生效) (在.zshrc中设置)
 unset TEST  #清除环境变量
-echo $PATH  #显示环境变量PATH
+echo $PATH  #显示环境变量PATH (vscode的code环境变量在/usr/local/bin中) webstorm环境变量也在
+/Applications/WebStorm.app/Contents/MacOS/webstorm #不用环境变量用绝对路径也行
 /Users/zhuyuanzheng/.nvm/versions/node/v14.17.0/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin
 # 按照优先级进行排序,分别为node全局环境变量/用户创建的环境变量/系统自带的环境变量/shell环境变量/
 ```
@@ -365,7 +364,7 @@ BSSID为wifi mac地址
 
 ESSID为wifi名称
 
-<img src="http://image.zhuyuanzheng1.top/image-20220608232942825.png" alt="image-20220608232942825" style="zoom:33%;" />
+<img src="https://image.zhuyuanzheng1.top/image-20220608232942825.png" alt="image-20220608232942825" style="zoom:33%;" />
 
 ### iphone投屏
 
@@ -415,7 +414,7 @@ xcode-select --install   #安装command line tools
 
 ### homebrew
 
-<img src="http://zhuyuanzheng1.top/image-20220427170851078.png" alt="image-20220427170851078" style="zoom:35%;" />
+<img src="https://image.zhuyuanzheng1.top/image-20220427170851078.png" alt="image-20220427170851078" style="zoom:35%;" />
 
 ```shell
 #/opt/homebrew  homebrew安装地址
@@ -487,6 +486,12 @@ git remote set-url origin https://github.com/Homebrew/homebrew-cask
 删掉.zprofile文件中的内容
 ```
 
+### 删除邮件的插件
+
+删除 /Library/Mail 下的所有的 包括Bundles  重启邮件
+
+
+
 ### homebrew安装(不能翻墙时使用)
 
 /bin/zsh -c "**$**(curl -fsSL https://gitee.com/cunkai/HomebrewCN/raw/master/Homebrew.sh)"
@@ -534,4 +539,10 @@ wifi-password
 [内核扩展与系统扩展](https://bynss.com/apple/638734.html)
 
 [anki-麦克米伦7000高频词记忆卡](https://zhuanlan.zhihu.com/p/27063304)
+
+
+
+
+
+
 

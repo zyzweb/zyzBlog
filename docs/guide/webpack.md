@@ -1,6 +1,6 @@
 ### module、chunk、bundle的区别
 
-<img src="http://image.zhuyuanzheng1.top/image-20220507143912301.png" alt="image-20220507143912301" style="zoom:50%;" />
+<img src="https://image.zhuyuanzheng1.top/image-20220507143912301.png" alt="image-20220507143912301" style="zoom:50%;" />
 
 module，chunk 和 bundle 其实就是同一份逻辑代码在不同转换场景下的取了三个名字：
 
@@ -23,7 +23,19 @@ chunk，app.js是业务代码，vendor则是公共的第三方代码,例如vue�
 
 
 
-tree shaking 只支持 esmodule
+### tree shaking
+
+**有副作用一定会被打包进bundle**
+
+tree shaking 只支持 esm
+
+最早由rollup提出,webpack2中开始支持,webpack4扩展了tree shaking检测能力
+
+在package.json中使用sideEffects来配置副作用(比如polifill影响全局作用域)  
+
+ usedExports依赖terser进行副作用检测 (使用/*#__PURE__*/)
+
+
 
 webpack5内置了terser-webpack-plugin,webpack4需要安装
 
@@ -115,6 +127,12 @@ scss-loader将scss转换为css,用css-loader来读取css,用style-loader来插�
 
 vue-loader是一个webpack loader 只是专门用来解析 .vue文件
 
+### file-loader与url-loader [链接](https://blog.csdn.net/wu_xianqiang/article/details/104558773)
+
+file-loader 可以指定要复制和放置资源文件的位置，以及如何使用版本哈希命名以获得更好的缓存。此外，这意味着 你可以就近管理图片文件，可以使用相对路径而不用担心部署时 URL 的问题。使用正确的配置，webpack 将会在打包输出中自动重写文件路径为正确的 URL。
+
+url-loader 允许你有条件地将文件转换为内联的 base-64 URL (当文件小于给定的阈值)，这会减少小文件的 HTTP 请求数。如果文件大于该阈值，会自动的交给 **file-loader** 处理
+
 ------
 
 **5个部分**
@@ -135,13 +153,11 @@ webpack立刻读取webpack.config-.js文件，生成到dist目录下
 
 webpack-dev-server 运行src下的代码，虚拟出build.js 测试
 
-<img src="http://image.zhuyuanzheng1.top/image-20220612210931777.png" alt="image-20220612210931777" style="zoom:50%;" />
+<img src="https://image.zhuyuanzheng1.top/image-20220612210931777.png" alt="image-20220612210931777" style="zoom:50%;" />
 
 在全局安装babel-cli 然后运行命令 babel 路径名 可以将es6转换为es5  还可以用babel网址进行转换
 
-postcss  postcss-loader 可以自动加上 ms-  webkit-
 
-创建 postcss.config.js(配置文件)
 
 webpack可以更改webpack.config.js文件名称 webpack --config 文件名
 
@@ -244,3 +260,4 @@ AST(abstract syntax tree)抽象语法树
 
 
 权限判断用位运算
+

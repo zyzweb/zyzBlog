@@ -18,7 +18,5 @@
 
 [chrome插件开发入门](https://www.cnblogs.com/leiting/p/14007516.html)
 
-
-
-
+[chrome源码](https://source.chromium.org/chromium/chromium/src/+/main:apps/app_lifetime_monitor.cc)
 

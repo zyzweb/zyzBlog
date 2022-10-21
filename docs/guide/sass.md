@@ -34,3 +34,16 @@ binding.node是二进制文件在npm库中没有
 
 
 
+
+
+将node-sass转换成dart-sass  
+
+npm i node-sass@npm:dart-sass
+
+
+
+
+
+## 参考链接
+
+[vue-cli3 node-sass 替换为dart-sass](https://juejin.cn/post/6990170277162254372)

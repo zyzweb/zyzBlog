@@ -86,7 +86,7 @@ pagefile.sys  虚拟内存
 
 查看win10版本号  打开cmd  slmgr/dlv
 
-<img src="http://image.zhuyuanzheng1.top/image-20220608234006089.png" alt="image-20220608234006089" style="zoom:50%;" />
+<img src="https://image.zhuyuanzheng1.top/image-20220608234006089.png" alt="image-20220608234006089" style="zoom:50%;" />
 
 机械硬盘 从E盘转D盘 50MB/S(30-70左右)
 

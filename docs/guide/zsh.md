@@ -88,8 +88,10 @@ sudo #按2下esc自动补上sudo
 ### 常用命令
 
 ```bash
+zsh --version  #5.8 zsh版本omz
 zsh_stats  #使用频率前 20 的命令
 source ~/.zshrc  #重启zsh
+omz update  #更新ohmyzsh
 ```
 
 

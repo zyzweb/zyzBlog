@@ -22,6 +22,12 @@ icon主题  Atom Material Icons
 
 ## 使用插件
 
+Image Icon Viewer  预览图片
+
+import cost  代码体积
+
+logIt  插入console
+
 Translation  翻译并替换
 
 px2rem  // px转rem
@@ -48,7 +54,7 @@ OnlineSearch2 //codeIf插件
 
 
 
-设置--版本控制--提交--关闭分析代码和检查TODO
+**设置--版本控制--提交--关闭分析代码和检查TODO**
 
 帮助->诊断工具->分析插件启动时间 //选择是否禁用插件
 
@@ -72,9 +78,49 @@ ws自带jest单元测试，具体可以【帮助】->[学习ide功能]了解详�
 
 *// TODO * 待做的事情
 
+
+
 ### 把webstorm加入环境变量
 
 工具-创建命令行启动器- 填入/usr/local/bin/webstorm
+
+
+
+关闭auto fetch   Settings` → `Version Control` → `GitToolBox` → `Auto Fetch` → `Auto Fetch
+
+
+
+### 设置右键菜单
+
+同理可以设置选项卡 侧边栏 顶部栏等其他右键菜单
+
+<img src="https://image.zhuyuanzheng1.top/image-20220807230414760.png" alt="image-20220807230414760" style="zoom:50%;" />
+
+
+
+## 调试配置
+
+<img src="https://image.zhuyuanzheng1.top/image-20220908192536445.png" alt="image-20220908192536445" style="zoom:50%;" />
+
+<img src="https://image.zhuyuanzheng1.top/image-20221013233512799.png" alt="image-20221013233512799" style="zoom:30%;" />
+
+==调试前端页面==
+
+![image-20221013234325963](https://image.zhuyuanzheng1.top/image-20221013234325963.png)
+
+==调试script脚本==
+
+![image-20221013234506513](https://image.zhuyuanzheng1.top/image-20221013234506513.png)
+
+
+
+## [快捷键](快捷键.md##webstorm)
+
+
+
+### 常见问题
+
+webstorm安装升级补丁失败,用腾讯柠檬卸载webstorm,无需彻底删除,然后重新安装即可
 
 
 
@@ -96,5 +142,5 @@ ws自带jest单元测试，具体可以【帮助】->[学习ide功能]了解详�
 
 
 
-<img src="http://image.zhuyuanzheng1.top/image-20220608233527570.png" alt="image-20220608233527570" style="zoom:50%;" />
+<img src="https://image.zhuyuanzheng1.top/image-20220608233527570.png" alt="image-20220608233527570" style="zoom:50%;" />
 

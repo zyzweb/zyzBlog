@@ -14,10 +14,10 @@ git add -A
 git commit -m 'deploy'
 
 git push -f https://github.com/zyzweb/zyzBlog.git master:master
-git push -f https://gitee.com/zyzweb/zyzBlog.git master:master
+# git push -f https://gitee.com/zyzweb/zyzBlog.git master:master
 
 # 如何发布到 https://<USERNAME>.github.io/<REPO>
 git push -f https://github.com/zyzweb/zyzBlog.git master:gh-pages
-git push -f https://gitee.com/zyzweb/zyzBlog.git master:gh-pages
+# git push -f https://gitee.com/zyzweb/zyzBlog.git master:gh-pages
 
 cd -

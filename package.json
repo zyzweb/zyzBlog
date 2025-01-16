@@ -1,0 +1,21 @@
+{
+  "name": "zyz-blog",
+  "version": "1.0.0",
+  "description": "zyz Blog",
+  "main": "index.js",
+  "repository": "https://github.com/zyzweb/zyzBlog.git",
+  "author": "zyzweb <zyz1609062132@gmail.com>",
+  "license": "MIT",
+  "scripts": {
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs"
+  },
+  "devDependencies": {
+    "@vuepress/plugin-google-analytics": "^1.9.7",
+    "vuepress": "^1.9.7",
+    "vuepress-plugin-sitemap": "^2.3.1"
+  },
+  "dependencies": {
+    "vuepress-theme-reco": "^1.6.13"
+  }
+}
